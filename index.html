@@ -39,59 +39,6 @@
                 </li>
             </ul>
         </div>
-        <div id="moi">
-            <div id="scroll_to_top">
-                <a href="#pres"><img src="image/scrolltop.png" alt="Retourner en haut" /></a>
-            </div>
-            <h1> Anna Briançon </h1>
-            <p>Bonjour je m'appelle Anna Briançon, je suis étudiante en première année d'informatique </p>
-            <h2> Mes langages </h2>
-            <img alt="html" src="img/logo/navigateur.png" width="5%">
-            <img alt="java" src="img/logo/java.png" width="5%">
-            <img alt="js" src="img/logo/javascript.png" width="5%">
-            <img alt="c#" src="img/logo/c-sharp.png" width="5%">
-            <img alt="sql" src="img/logo/sql.png" width="5%">
-        </div>
-        <script>
-            document.querySelector("#cliqueMoi").onclick = function() {
-                if (window.getComputedStyle(document.querySelector('#moi')).display == 'none') {
-                    document.querySelector("#moi").style.display = "block";
-
-                } else {
-                    document.querySelector("#moi").style.display = "none";
-                }
-            }
-            document.querySelector("#scroll_to_top").onclick = function() {
-                if (window.getComputedStyle(document.querySelector('#moi')).display == 'none') {
-                    document.querySelector("#moi").style.display = "block";
-                } else {
-                    document.querySelector("#moi").style.display = "none";
-                }
-            }
-        </script>
-        <div id="contact">
-            <div id="retour">
-                <a href="#pres"><img src="image/scrolltop.png" alt="Retourner en haut" /></a>
-            </div>
-            <h1> Contact </h1>
-            <p>mail</p>
-        </div>
-        <script>
-            document.querySelector("#cliqueCont").onclick = function() {
-                if (window.getComputedStyle(document.querySelector('#contact')).display == 'none') {
-                    document.querySelector("#contact").style.display = "block";
-                } else {
-                    document.querySelector("#contact").style.display = "none";
-                }
-            }
-            document.querySelector("#retour").onclick = function() {
-                if (window.getComputedStyle(document.querySelector('#contact')).display == 'none') {
-                    document.querySelector("#contact").style.display = "block";
-                } else {
-                    document.querySelector("#contact").style.display = "none";
-                }
-            }
-        </script>
     </header>
 
     <article>
@@ -131,10 +78,11 @@
             <div id="Java">
                 <h2>Java</h2>
 
-                <a id="pong" href="pong.html">
+                <div id="pong">
                     <p>Pong</p>
                     <img id="imgPong" src="img/pong.png" width=40%>
-                </a>
+
+                </div>
                 <a id="lowatem" href="lowatem.html">
                     <img id="imgLowatem" src="img/lowatem.png" width=40%>
                     <p>Lowatem</p>
@@ -174,9 +122,80 @@
             </div>
         </div>
     </section>
+    <div id="moi">
+        <div id="scroll_to_top">
+            <a href="#pres"><img src="image/scrolltop.png" alt="Retourner en haut" /></a>
+        </div>
+        <h1> Anna Briançon </h1>
+        <p>Bonjour je m'appelle Anna Briançon, je suis étudiante en première année d'informatique </p>
+        <h2> Mes langages </h2>
+        <img alt="html" src="img/logo/navigateur.png" width="5%">
+        <img alt="java" src="img/logo/java.png" width="5%">
+        <img alt="js" src="img/logo/javascript.png" width="5%">
+        <img alt="c#" src="img/logo/c-sharp.png" width="5%">
+        <img alt="sql" src="img/logo/sql.png" width="5%">
+    </div>
+
+    <div id="contact">
+        <div id="retour">
+            <a href="#pres"><img src="image/scrolltop.png" alt="Retourner en haut" /></a>
+        </div>
+        <h1> Contact </h1>
+        <p>mail</p>
+    </div>
     <footer>
         <p>Anna Briançon - Portfolio</p>
     </footer>
+    <script>
+        document.querySelector("#cliqueMoi").onclick = function() {
+            if (window.getComputedStyle(document.querySelector('#moi')).display == 'none') {
+                document.querySelector("#moi").style.display = "block";
+                document.querySelector("section").style.display = "none";
+            } else {
+                document.querySelector("#moi").style.display = "none";
+                document.querySelector("section").style.display = "block";
+
+            }
+        }
+        document.querySelector("#scroll_to_top").onclick = function() {
+            if (window.getComputedStyle(document.querySelector('#moi')).display == 'none') {
+                document.querySelector("#moi").style.display = "block";
+                document.querySelector("section").style.display = "none";
+
+            } else {
+                document.querySelector("#moi").style.display = "none";
+                document.querySelector("section").style.display = "block";
+
+            }
+        }
+
+        document.querySelector("#cliqueCont").onclick = function() {
+            if (window.getComputedStyle(document.querySelector('#contact')).display == 'none') {
+                document.querySelector("#contact").style.display = "block";
+                document.querySelector("section").style.display = "none";
+
+            } else {
+                document.querySelector("#contact").style.display = "none";
+                document.querySelector("section").style.display = "block";
+
+            }
+        }
+        document.querySelector("#retour").onclick = function() {
+            if (window.getComputedStyle(document.querySelector('#contact')).display == 'none') {
+                document.querySelector("#contact").style.display = "block";
+                document.querySelector("section").style.display = "none";
+
+            } else {
+                document.querySelector("#contact").style.display = "none";
+                document.querySelector("section").style.display = "block";
+
+            }
+        }
+
+        document.querySelector("#pong").onclick = function() {
+            var text = document.getElementById('pong').innerHTML = '<iframe src="pdf/pong.pdf" height="100%" width="100%"</iframe>';
+        }
+    </script>
 </body>
 
 </html>
