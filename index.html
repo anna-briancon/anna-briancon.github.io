@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <header>
+        <div id="pres">
+            <div id="nom">
+                <p>Anna Briançon</p>
+            </div>
+            <p> Developpeuse informatique</p>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a class="menu" href="portfolio.html">Portfolio</a></li>
+                <li><a class="menu" href="#projet"> Projets</a>
+                    <ul id="java">
+                        <li><a href="#Java">Java</a></li>
+                        <li><a href="#Bash">Bash</a></li>
+                        <li><a href="#Html">Html</a></li>
+                        <li><a href="#Sql">Sql</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div id="cliqueMoi"><a class="menu">Moi</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div id="cliqueCont"><a class="menu">Contacts</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="moi">
+            <div id="scroll_to_top">
+                <a href="#pres"><img src="image/scrolltop.png" alt="Retourner en haut" /></a>
+            </div>
+            <h1> Anna Briançon </h1>
+            <p>Bonjour je m'appelle Anna Briançon, je suis étudiante en première année d'informatique </p>
+            <h2> Mes langages </h2>
+            <img alt="html" src="img/logo/navigateur.png" width="5%">
+            <img alt="java" src="img/logo/java.png" width="5%">
+            <img alt="js" src="img/logo/javascript.png" width="5%">
+            <img alt="c#" src="img/logo/c-sharp.png" width="5%">
+            <img alt="sql" src="img/logo/sql.png" width="5%">
+        </div>
+        <script>
+            document.querySelector("#cliqueMoi").onclick = function() {
+                if (window.getComputedStyle(document.querySelector('#moi')).display == 'none') {
+                    document.querySelector("#moi").style.display = "block";
+
+                } else {
+                    document.querySelector("#moi").style.display = "none";
+                }
+            }
+            document.querySelector("#scroll_to_top").onclick = function() {
+                if (window.getComputedStyle(document.querySelector('#moi')).display == 'none') {
+                    document.querySelector("#moi").style.display = "block";
+                } else {
+                    document.querySelector("#moi").style.display = "none";
+                }
+            }
+        </script>
+        <div id="contact">
+            <div id="retour">
+                <a href="#pres"><img src="image/scrolltop.png" alt="Retourner en haut" /></a>
+            </div>
+            <h1> Contact </h1>
+            <p>mail</p>
+        </div>
+        <script>
+            document.querySelector("#cliqueCont").onclick = function() {
+                if (window.getComputedStyle(document.querySelector('#contact')).display == 'none') {
+                    document.querySelector("#contact").style.display = "block";
+                } else {
+                    document.querySelector("#contact").style.display = "none";
+                }
+            }
+            document.querySelector("#retour").onclick = function() {
+                if (window.getComputedStyle(document.querySelector('#contact')).display == 'none') {
+                    document.querySelector("#contact").style.display = "block";
+                } else {
+                    document.querySelector("#contact").style.display = "none";
+                }
+            }
+        </script>
+    </header>
+
+    <article>
+        <div id="slogan">
+            <div id="acceuil">
+                <p>Developpeuse</p>
+            </div>
+            <img id="pdp" src="img/pdp.jpg">
+        </div>
+    </article>
+    <section>
+        <div id="projet">
+            <h1>Projets</h1>
+            <div id="sommaire">
+                <ul id="JavaP">
+                    <h3>Java</h3>
+                    <li>
+                        <a href="pong.html">Pong</a>
+                    </li>
+                    <li>Lowatem</li>
+                    <li>Snake</li>
+                </ul>
+                <ul id="BashP">
+                    <h3>Bash</h3>
+                    <li>installation de poste</li>
+                    <li>Script bash</li>
+                </ul>
+                <ul id="HtmlP">
+                    <h3>HTML</h3>
+                    <li>Entreprise</li>
+                </ul>
+                <ul id="SqlP">
+                    <h3>SQL</h3>
+                    <li>Gestion de vin</li>
+                </ul>
+            </div>
+            <div id="Java">
+                <h2>Java</h2>
+
+                <a id="pong" href="pong.html">
+                    <p>Pong</p>
+                    <img id="imgPong" src="img/pong.png" width=40%>
+                </a>
+                <a id="lowatem" href="lowatem.html">
+                    <img id="imgLowatem" src="img/lowatem.png" width=40%>
+                    <p>Lowatem</p>
+                </a>
+                <a id="jpo" href="jpo.html">
+                    <p>Création d'un jeu pour des lycéens</p>
+                    <img id="imgJpo" src="img/jpo.png" width=40%>
+
+                </a>
+            </div>
+            <div id="Bash">
+                <h2>Bash</h2>
+                <a id="poste" href="installation.html">
+                    <img id="imgPoste" src="img/poste.png" width=40%>
+                    <p>Installation d'une machine virtuelle</p>
+                </a>
+                <a id="scriptbash" href="bash.html">
+                    <p>Création d'un script bash</p>
+                    <img id="imgBash" src="img/bash.png" width=40%>
+                </a>
+
+
+            </div>
+            <div id="Html">
+                <h2>Html</h2>
+                <a id="site" href="site.html">
+                    <img id="imgSite" src="img/site.png" width=40%>
+                    <p>Site web pour une entreprise</p>
+                </a>
+            </div>
+            <div id="Sql">
+                <h2>Sql</h2>
+                <a id="vin" href="vin.html">
+                    <p>Création d'une base de donnée</p>
+                    <img id="imgVin" src="img/vin.png" width=40%>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Anna Briançon - Portfolio</p>
+    </footer>
+</body>
+
+</html>

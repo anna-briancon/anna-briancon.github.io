@@ -1,0 +1,388 @@
+html {
+    background: radial-gradient(400px circle at 30% 10%, rgba(35, 173, 149, .95), rgba(35, 173, 149, 0)), radial-gradient(300px circle at 73% 60%, rgba(69, 28, 84, .8), rgba(69, 28, 84, 0)), radial-gradient(280px circle at 52% 70%, rgba(220, 123, 67, .95), rgba(220, 123, 67, 0)), radial-gradient(421px circle at 82% 82%, rgba(197, 197, 145, .95), rgba(197, 197, 145, 0)), radial-gradient(450px circle at 42% 65%, rgba(192, 40, 89, 1), rgba(192, 40, 89, 0)), radial-gradient(480px circle at 40% 75%, rgba(192, 40, 89, 1), rgba(192, 40, 89, 0)), radial-gradient(480px circle at 38% 95%, rgba(192, 40, 89, 1), rgba(192, 40, 89, 0)), radial-gradient(435px circle at 65% 73%, rgba(235, 188, 143, 1), rgba(235, 188, 143, 0)), radial-gradient(850px circle at right top, rgba(147, 17, 87, 1), rgba(201, 90, 0, 0.9), rgba(209, 64, 97, .4), rgba(172, 59, 85, 0)), radial-gradient(422px circle at right 75%, rgba(35, 173, 149, .95), rgba(35, 173, 149, 0)), radial-gradient(350px circle at right 50%, rgba(204, 116, 96, 1), rgba(204, 116, 96, 0)), radial-gradient(300px circle at right bottom, rgba(169, 82, 160, 1), rgba(169, 82, 160, 0)), linear-gradient(to right bottom, rgba(71, 17, 77, 0), rgba(66, 36, 201, 0.95) 40%, rgba(30, 17, 77, 0.5) 60%, rgba(71, 17, 77, 0)), linear-gradient(to right, #1c0361, #2044b8);
+    z-index: 0;
+}
+
+header {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    max-height: 15vh;
+    z-index: 1;
+}
+
+#pres {
+    margin-left: 2%;
+}
+
+#nom {
+    font-weight: bold;
+    padding-left: 10%;
+    font-size: 2em;
+}
+
+#nav {
+    margin-right: 10%;
+}
+
+.menu {
+    font-size: 1.5em;
+}
+
+#nav li {
+    list-style-type: none;
+    margin-left: 10%;
+}
+
+#nav li:hover {
+    list-style-type: square;
+}
+
+
+/* sous menu non affiché par défaut*/
+
+#nav li ul {
+    font-size: 1em;
+    display: none;
+}
+
+
+/* affichage du sous menu au survol*/
+
+#nav li:hover ul {
+    display: contents;
+}
+
+a {
+    text-decoration: none;
+    font-family: basier-circle, Helvetica, arial, sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+p {
+    font-family: basier-circle, Helvetica, arial, sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    margin-left: 2%;
+}
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(174, 219, 255);
+    margin-left: 4%;
+}
+
+h3 {
+    font-family: basier-circle, Helvetica, arial, sans-serif;
+    color: rgb(174, 219, 255);
+}
+
+article {
+    height: auto;
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+#acceuil {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1%;
+    width: 30%;
+    position: relative;
+}
+
+
+/*Animations*/
+
+@keyframes pres {
+    0% {
+        margin-left: 0%;
+    }
+    100% {
+        margin-left: 20%;
+    }
+}
+
+
+/* Appliquer l'anim*/
+
+#acceuil {
+    padding-left: 2%;
+    margin-left: 20%;
+    animation-name: pres;
+    animation-duration: 2s;
+}
+
+#acceuil>p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: .97;
+}
+
+#pdp {
+    display: inline-block;
+    max-width: 180px;
+    position: relative;
+    left: 5%;
+    border-radius: 50%;
+    margin-top: 1%;
+}
+
+
+/*Animations pdp*/
+
+@keyframes pdp {
+    0% {
+        margin-left: 50%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+#pdp {
+    padding-left: 2%;
+    margin-left: 0%;
+    animation-name: pdp;
+    animation-duration: 2s;
+}
+
+section {
+    margin: 1%;
+    padding-top: 2%;
+    box-shadow: 1px 5px 12px rgb(8, 8, 8);
+}
+
+section p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    color: cornsilk;
+}
+
+#projet {
+    width: auto;
+}
+
+#sommaire {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    font-family: basier-circle, Helvetica, arial, sans-serif;
+    color: white;
+    background-color: #2044b81f;
+    border-style: double;
+    margin: 5%;
+    display: none;
+}
+
+#pong {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#pong>p {
+    display: flex;
+    align-items: center;
+}
+
+#pong:hover {
+    border: solid 2px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+#lowatem {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#lowatem>p {
+    display: flex;
+    align-items: center;
+}
+
+#lowatem:hover {
+    border: solid 2px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+#jpo {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+}
+
+#jpo>p {
+    display: flex;
+    align-items: center;
+}
+
+#jpo:hover {
+    border: solid 2px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+#scriptbash {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+}
+
+#scriptbash>p {
+    display: flex;
+    align-items: center;
+}
+
+#scriptbash:hover {
+    border: solid 2px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+#poste {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#poste>p {
+    display: flex;
+    align-items: center;
+}
+
+#poste:hover {
+    border: solid 2px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+#site {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#site>p {
+    display: flex;
+    align-items: center;
+}
+
+#site:hover {
+    border: solid 2px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+#Sql {
+    padding-bottom: 5%;
+}
+
+#vin {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#vin>p {
+    display: flex;
+    align-items: center;
+}
+
+#vin:hover {
+    border: solid 2px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+footer {
+    margin: 1%;
+}
+
+
+/* Format téléphone*/
+
+@media (max-width: 1250px) {}
+
+#moi {
+    background-color: #1c0361;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    padding: 2%;
+    margin-top: 17vh;
+}
+
+
+/*Animations moi*/
+
+@keyframes moi {
+    0% {
+        margin-left: 50%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+#moi {
+    padding-left: 2%;
+    margin-left: 0%;
+    animation-name: moi;
+    animation-duration: 2s;
+}
+
+#contact {
+    background-color: #1c0361;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    padding: 2%;
+    margin-top: 17vh;
+}
+
+@keyframes contact {
+    0% {
+        margin-left: 50%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+#contact {
+    padding-left: 2%;
+    margin-left: 0%;
+    animation-name: contact;
+    animation-duration: 2s;
+}
