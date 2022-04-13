@@ -53,6 +53,10 @@ header {
     display: contents;
 }
 
+.nav {
+    display: none;
+}
+
 a {
     text-decoration: none;
     font-family: basier-circle, Helvetica, arial, sans-serif;
@@ -81,6 +85,8 @@ h2 {
 h3 {
     font-family: basier-circle, Helvetica, arial, sans-serif;
     color: rgb(174, 219, 255);
+    margin-left: 5%;
+    margin-bottom: 2%;
 }
 
 article {
@@ -156,8 +162,7 @@ article {
 
 section {
     margin: 1%;
-    padding-top: 2%;
-    box-shadow: 1px 5px 12px rgb(8, 8, 8);
+    padding-top: 1%;
 }
 
 section p {
@@ -168,6 +173,13 @@ section p {
 
 #projet {
     width: auto;
+    box-shadow: 5px 5px 50px rgb(8, 8, 8);
+    padding-top: 2%;
+}
+
+.sommaire>p {
+    font-size: 1em;
+    margin-left: 4%;
 }
 
 #sommaire {
@@ -198,8 +210,7 @@ section p {
 }
 
 #pong:hover {
-    border: solid 2px;
-    box-shadow: 8px 8px 12px #aaa;
+    border: solid 2px rgb(1, 1, 1);
 }
 
 #lowatem {
@@ -218,8 +229,7 @@ section p {
 }
 
 #lowatem:hover {
-    border: solid 2px;
-    box-shadow: 8px 8px 12px #aaa;
+    border: solid 2px rgb(1, 1, 1);
 }
 
 #jpo {
@@ -239,8 +249,7 @@ section p {
 }
 
 #jpo:hover {
-    border: solid 2px;
-    box-shadow: 8px 8px 12px #aaa;
+    border: solid 2px rgb(1, 1, 1);
 }
 
 #scriptbash {
@@ -260,8 +269,7 @@ section p {
 }
 
 #scriptbash:hover {
-    border: solid 2px;
-    box-shadow: 8px 8px 12px #aaa;
+    border: solid 2px rgb(1, 1, 1);
 }
 
 #poste {
@@ -280,8 +288,7 @@ section p {
 }
 
 #poste:hover {
-    border: solid 2px;
-    box-shadow: 8px 8px 12px #aaa;
+    border: solid 2px rgb(1, 1, 1);
 }
 
 #site {
@@ -300,8 +307,7 @@ section p {
 }
 
 #site:hover {
-    border: solid 2px;
-    box-shadow: 8px 8px 12px #aaa;
+    border: solid 2px rgb(1, 1, 1);
 }
 
 #Sql {
@@ -324,8 +330,7 @@ section p {
 }
 
 #vin:hover {
-    border: solid 2px;
-    box-shadow: 8px 8px 12px #aaa;
+    border: solid 2px rgb(1, 1, 1);
 }
 
 footer {
@@ -342,7 +347,7 @@ footer {
     display: none;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    z-index: 2;
     padding: 2%;
     padding-left: 2%;
     margin-left: 0%;
@@ -362,6 +367,18 @@ footer {
     }
 }
 
+#blog {
+    margin-top: 2%;
+    width: 5%;
+    border: solid black;
+    padding: 1%;
+    border-radius: 100%;
+}
+
+#blog>a {
+    color: cornflowerblue;
+}
+
 #contact {
     background-color: #1c0361;
     display: none;
@@ -375,11 +392,95 @@ footer {
     animation-duration: 2s;
 }
 
+#contact>p {
+    font-size: 2em;
+    margin-left: 5%;
+}
+
+#mail {
+    margin-left: 5%;
+}
+
+#mail>a {
+    color: rgba(217, 80, 210, 0.688);
+}
+
+#mail>a:hover {
+    color: rgb(217, 80, 210);
+}
+
+#reseau {
+    margin-top: 2%;
+    text-align: center;
+}
+
 @keyframes contact {
     0% {
         margin-left: 50%;
     }
     100% {
         margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    article {
+        margin-top: 40%;
+        text-align: center;
+    }
+    #acceuil {
+        display: none;
+    }
+    #pdp {
+        animation-name: none;
+        width: 40%;
+    }
+    #pres {
+        margin-left: 1%;
+    }
+    #nom {
+        font-weight: bold;
+        padding-left: 1%;
+        font-size: 2em;
+    }
+    #projet {
+        max-width: 100%;
+    }
+    #projet p {
+        font-size: 1em;
+        display: block;
+        margin: 1%;
+    }
+    #projet img {
+        width: auto;
+        height: 50%;
+    }
+    #pong {
+        display: block;
+        text-align: center;
+    }
+    #lowatem {
+        display: block;
+        text-align: center;
+    }
+    #jpo {
+        display: block;
+        text-align: center;
+    }
+    #poste {
+        display: block;
+        text-align: center;
+    }
+    #scriptbash {
+        display: block;
+        text-align: center;
+    }
+    #site {
+        display: block;
+        text-align: center;
+    }
+    #vin {
+        display: block;
+        text-align: center;
     }
 }
