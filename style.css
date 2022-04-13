@@ -1,6 +1,7 @@
 html {
     background: radial-gradient(400px circle at 30% 10%, rgba(35, 173, 149, .95), rgba(35, 173, 149, 0)), radial-gradient(300px circle at 73% 60%, rgba(69, 28, 84, .8), rgba(69, 28, 84, 0)), radial-gradient(280px circle at 52% 70%, rgba(220, 123, 67, .95), rgba(220, 123, 67, 0)), radial-gradient(421px circle at 82% 82%, rgba(197, 197, 145, .95), rgba(197, 197, 145, 0)), radial-gradient(450px circle at 42% 65%, rgba(192, 40, 89, 1), rgba(192, 40, 89, 0)), radial-gradient(480px circle at 40% 75%, rgba(192, 40, 89, 1), rgba(192, 40, 89, 0)), radial-gradient(480px circle at 38% 95%, rgba(192, 40, 89, 1), rgba(192, 40, 89, 0)), radial-gradient(435px circle at 65% 73%, rgba(235, 188, 143, 1), rgba(235, 188, 143, 0)), radial-gradient(850px circle at right top, rgba(147, 17, 87, 1), rgba(201, 90, 0, 0.9), rgba(209, 64, 97, .4), rgba(172, 59, 85, 0)), radial-gradient(422px circle at right 75%, rgba(35, 173, 149, .95), rgba(35, 173, 149, 0)), radial-gradient(350px circle at right 50%, rgba(204, 116, 96, 1), rgba(204, 116, 96, 0)), radial-gradient(300px circle at right bottom, rgba(169, 82, 160, 1), rgba(169, 82, 160, 0)), linear-gradient(to right bottom, rgba(71, 17, 77, 0), rgba(66, 36, 201, 0.95) 40%, rgba(30, 17, 77, 0.5) 60%, rgba(71, 17, 77, 0)), linear-gradient(to right, #1c0361, #2044b8);
     z-index: 0;
+    width: auto;
 }
 
 header {
@@ -163,6 +164,7 @@ article {
 section {
     margin: 1%;
     padding-top: 1%;
+    overflow: hidden;
 }
 
 section p {
