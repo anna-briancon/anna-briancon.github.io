@@ -1,0 +1,101 @@
+@media screen and (max-width: 500px) {
+    article {
+        text-align: center;
+    }
+    #image {
+        display: none;
+    }
+    #acceuil {
+        display: none;
+    }
+    #nav li ul {
+        display: none;
+    }
+    #nav li:hover ul {
+        display: none;
+    }
+    #nav {
+        margin-right: 3%;
+    }
+    #pdp {
+        width: 40%;
+        margin-top: 10%;
+        display: inline-block;
+    }
+    #pres {
+        margin-left: 1%;
+    }
+    #nom {
+        font-weight: bold;
+        padding-left: 1%;
+        font-size: 2em;
+    }
+    /* Projets */
+    #projet {
+        max-width: 100%;
+    }
+    #projet p {
+        font-size: 1em;
+        display: block;
+        margin: 1%;
+    }
+    #projet img {
+        width: auto;
+        height: 70%;
+    }
+    #pong {
+        display: block;
+        text-align: center;
+        height: 30vh;
+    }
+    #lowatem {
+        display: block;
+        text-align: center;
+        height: 30vh;
+    }
+    #jpo {
+        display: block;
+        text-align: center;
+        height: 30vh;
+    }
+    #poste {
+        display: block;
+        text-align: center;
+        height: 30vh;
+    }
+    #scriptbash {
+        display: block;
+        text-align: center;
+        height: 30vh;
+    }
+    #site {
+        display: block;
+        text-align: center;
+        height: 30vh;
+    }
+    #vin {
+        display: block;
+        text-align: center;
+        height: 30vh;
+    }
+    #site img {
+        height: 40%;
+    }
+    /**/
+    #moi {
+        max-width: auto;
+    }
+    #contact {
+        max-width: auto;
+    }
+    #contact>p {
+        font-size: 1em;
+        margin-left: 5%;
+    }
+    #blog {
+        width: 20%;
+    }
+    #moi>img {
+        width: 10%;
+    }
+}

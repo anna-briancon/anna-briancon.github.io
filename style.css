@@ -54,10 +54,6 @@ header {
     display: contents;
 }
 
-.nav {
-    display: none;
-}
-
 a {
     text-decoration: none;
     font-family: basier-circle, Helvetica, arial, sans-serif;
@@ -96,45 +92,8 @@ article {
     margin-bottom: 5%;
 }
 
-#acceuil {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 1%;
-    width: 30%;
-    position: relative;
-}
-
-
-/*Animations*/
-
-@keyframes pres {
-    0% {
-        margin-left: 0%;
-    }
-    100% {
-        margin-left: 20%;
-    }
-}
-
-
-/* Appliquer l'anim*/
-
-#acceuil {
-    padding-left: 2%;
-    margin-left: 20%;
-    animation-name: pres;
-    animation-duration: 2s;
-}
-
-#acceuil>p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
-    font-weight: 800;
-    line-height: .97;
-}
-
 #pdp {
-    display: inline-block;
+    display: none;
     max-width: 180px;
     position: relative;
     left: 5%;
@@ -142,23 +101,18 @@ article {
     margin-top: 1%;
 }
 
-
-/*Animations pdp*/
-
-@keyframes pdp {
-    0% {
-        margin-left: 50%;
-    }
-    100% {
-        margin-left: 0%;
-    }
+#image {
+    max-width: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
 }
 
-#pdp {
-    padding-left: 2%;
-    margin-left: 0%;
-    animation-name: pdp;
-    animation-duration: 2s;
+.image {
+    width: auto;
+    height: 100%;
 }
 
 section {
@@ -339,11 +293,6 @@ footer {
     margin: 1%;
 }
 
-
-/* Format téléphone*/
-
-@media (max-width: 1250px) {}
-
 #moi {
     background-color: #1c0361;
     display: none;
@@ -353,20 +302,6 @@ footer {
     padding: 2%;
     padding-left: 2%;
     margin-left: 0%;
-    animation-name: moi;
-    animation-duration: 2s;
-}
-
-
-/*Animations moi*/
-
-@keyframes moi {
-    0% {
-        margin-left: 50%;
-    }
-    100% {
-        margin-left: 0%;
-    }
 }
 
 #blog {
@@ -390,8 +325,6 @@ footer {
     padding: 2%;
     padding-left: 2%;
     margin-left: 0%;
-    animation-name: contact;
-    animation-duration: 2s;
 }
 
 #contact>p {
@@ -414,75 +347,4 @@ footer {
 #reseau {
     margin-top: 2%;
     text-align: center;
-}
-
-@keyframes contact {
-    0% {
-        margin-left: 50%;
-    }
-    100% {
-        margin-left: 0%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    article {
-        margin-top: 40%;
-        text-align: center;
-    }
-    #acceuil {
-        display: none;
-    }
-    #pdp {
-        animation-name: none;
-        width: 40%;
-    }
-    #pres {
-        margin-left: 1%;
-    }
-    #nom {
-        font-weight: bold;
-        padding-left: 1%;
-        font-size: 2em;
-    }
-    #projet {
-        max-width: 100%;
-    }
-    #projet p {
-        font-size: 1em;
-        display: block;
-        margin: 1%;
-    }
-    #projet img {
-        width: auto;
-        height: 50%;
-    }
-    #pong {
-        display: block;
-        text-align: center;
-    }
-    #lowatem {
-        display: block;
-        text-align: center;
-    }
-    #jpo {
-        display: block;
-        text-align: center;
-    }
-    #poste {
-        display: block;
-        text-align: center;
-    }
-    #scriptbash {
-        display: block;
-        text-align: center;
-    }
-    #site {
-        display: block;
-        text-align: center;
-    }
-    #vin {
-        display: block;
-        text-align: center;
-    }
 }
