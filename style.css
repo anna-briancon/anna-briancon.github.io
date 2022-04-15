@@ -87,8 +87,8 @@ h3 {
 }
 
 article {
+    width: 100%;
     height: auto;
-    margin: 1%;
     margin-bottom: 5%;
 }
 
@@ -157,7 +157,7 @@ section p {
     padding: 2%;
     display: flex;
     justify-content: space-around;
-    height: 50vh;
+    height: 50vh
 }
 
 #pong>p {

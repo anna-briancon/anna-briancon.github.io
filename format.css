@@ -1,6 +1,7 @@
 @media screen and (max-width: 500px) {
     article {
         text-align: center;
+        background-color: rgba(240, 248, 255, 0);
     }
     #image {
         display: none;
@@ -84,9 +85,11 @@
     /**/
     #moi {
         max-width: auto;
+        margin-top: 15%;
     }
     #contact {
         max-width: auto;
+        margin-top: 15%;
     }
     #contact>p {
         font-size: 1em;
