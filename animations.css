@@ -1,74 +1,68 @@
-/*Animations presentation*/
-
-@keyframes pres {
-    0% {
-        margin-left: 0%;
+    /*Animations presentation*/
+    
+    @keyframes pres {
+        0% {
+            margin-left: 0%;
+        }
+        100% {
+            margin-left: 20%;
+        }
     }
-    100% {
+    /* Appliquer l'anim*/
+    
+    #acceuil {
+        padding-left: 2%;
         margin-left: 20%;
+        animation-name: pres;
+        animation-duration: 2s;
     }
-}
-
-
-/* Appliquer l'anim*/
-
-#acceuil {
-    padding-left: 2%;
-    margin-left: 20%;
-    animation-name: pres;
-    animation-duration: 2s;
-}
-
-
-/*Animations moi*/
-
-@keyframes moi {
-    0% {
-        margin-left: 50%;
+    /*Animations moi*/
+    
+    @keyframes moi {
+        0% {
+            margin-left: 50%;
+        }
+        100% {
+            margin-left: 0%;
+        }
     }
-    100% {
-        margin-left: 0%;
+    
+    #moi {
+        animation-name: moi;
+        animation-duration: 2s;
     }
-}
-
-#moi {
-    animation-name: moi;
-    animation-duration: 2s;
-}
-
-
-/*Animations contact*/
-
-@keyframes contact {
-    0% {
-        margin-left: 50%;
+    /*Animations contact*/
+    
+    @keyframes contact {
+        0% {
+            margin-left: 50%;
+        }
+        100% {
+            margin-left: 0%;
+        }
     }
-    100% {
-        margin-left: 0%;
+    
+    #contact {
+        animation-name: contact;
+        animation-duration: 2s;
     }
-}
-
-#contact {
-    animation-name: contact;
-    animation-duration: 2s;
-}
-
-.image {
-    animation-name: image;
-    animation-duration: 2s;
-}
-
-#image {
-    animation-name: image;
-    animation-duration: 2s;
-    background-color: black;
-}
-
-@keyframes image {
-    0% {
-        margin-left: 100%;
+    
+    .image {
+        animation-name: image;
+        animation-duration: 2s;
     }
-    100% {
-        margin-left: 0%;
+    
+    #image {
+        animation-name: image;
+        animation-duration: 2s;
+        background-color: black;
     }
-}
+    
+    @keyframes image {
+        0% {
+            margin-left: 100%;
+        }
+        100% {
+            margin-left: 0%;
+        }
+    }
