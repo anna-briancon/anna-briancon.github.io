@@ -85,11 +85,12 @@
     /**/
     #moi {
         max-width: auto;
-        margin-top: 15%;
+        margin-top: 7em;
     }
     #contact {
         max-width: auto;
-        margin-top: 15%;
+        margin-top: 7em;
+        margin-bottom: 50%;
     }
     #contact>p {
         font-size: 1em;
