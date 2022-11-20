@@ -18,33 +18,32 @@
     }
     /*Animations moi*/
     
-    @keyframes moi {
-        0% {
-            margin-left: 50%;
+    @media screen and (min-width: 820px) {
+        @keyframes moi {
+            0% {
+                margin-left: 50%;
+            }
+            100% {
+                margin-left: 0%;
+            }
         }
-        100% {
-            margin-left: 0%;
+        #moi {
+            animation-name: moi;
+            animation-duration: 2s;
         }
-    }
-    
-    #moi {
-        animation-name: moi;
-        animation-duration: 2s;
-    }
-    /*Animations contact*/
-    
-    @keyframes contact {
-        0% {
-            margin-left: 50%;
+        /*Animations contact*/
+        @keyframes contact {
+            0% {
+                margin-left: 50%;
+            }
+            100% {
+                margin-left: 0%;
+            }
         }
-        100% {
-            margin-left: 0%;
+        #contact {
+            animation-name: contact;
+            animation-duration: 2s;
         }
-    }
-    
-    #contact {
-        animation-name: contact;
-        animation-duration: 2s;
     }
     
     .image {

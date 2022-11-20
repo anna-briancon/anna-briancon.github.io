@@ -120,9 +120,13 @@ article {
     -webkit-filter: brightness(70%);
 }
 
+#pdp2 {
+    width: 30%;
+}
+
 .image {
     margin: auto;
-    width: 50%;
+    width: 45%;
 }
 
 section {
@@ -296,6 +300,25 @@ section p {
 }
 
 #vin:hover {
+    border: solid 2px rgb(1, 1, 1);
+}
+
+#QuiPrend {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+}
+
+#QuiPrend>p {
+    display: flex;
+    align-items: center;
+}
+
+#QuiPrend:hover {
     border: solid 2px rgb(1, 1, 1);
 }
 
