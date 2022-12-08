@@ -29,8 +29,7 @@ h2 {
 }
 
 .Droite:hover {
-    background-color: rgba(255, 255, 255, 0.218);
-    border-radius: 40px;
+    border: solid 2px rgb(0, 0, 0);
 }
 
 .Gauche {
@@ -49,17 +48,5 @@ h2 {
 }
 
 .Gauche:hover {
-    background-color: rgba(255, 255, 255, 0.218);
-    border-radius: 40px;
-}
-
-.reveal {
-    opacity: 0;
-    transform: translateY(5%);
-}
-
-.reveal-visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s;
+    border: solid 2px rgb(0, 0, 0);
 }

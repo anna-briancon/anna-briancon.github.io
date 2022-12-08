@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styleProjet.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">:)</a>
+        <ul>
+            <li><a href="index.html" class="active">Accueil </a></li>
+            <li><a href="index.html#projet">Projets </a></li>
+            <li><a href="#">Moi </a></li>
+            <li><a href="contact.html">Contacts </a></li>
+        </ul>
+    </header>
+    <section>
+        <h1 id="nom"><span>Qui suis-je ?</span></h1>
+        <img src="img/bird1.png" id="bird1">
+        <img src="img/bird2.png" id="bird2">
+        <img src="img/forest.png" id="forest">
+
+        <img src="img/rocks.png" id="rocks">
+        <img src="img/water.png" id="water">
+    </section>
+    <div id="projet">
+        <div id="scrollUp">
+            <a href="#top"><img src="img/fleche.png" /></a>
+        </div>
+        <div id="moi">
+            <p>Bonjour je m'appelle Anna Briançon, j'ai 19 ans et je suis actuellement en première année de DUT informatique.</p>
+            <p>Après avoir passée un bac STI2D option SIN (Système d'Information et Numérique), j'ai décidé d'intégrer le DUT informatique de Bordeaux.</p>
+            <p>Aimant l'aventure, venir à Bordeaux était pour moi, une oportunité car venant de Nantes j'ai pû découvrir une nouvelle ville et rencontrée de nouvelles personnes. </p>
+            <p>Depuis 4 ans maintenant, je me suis découvert une passion dans l'informatique plus particulierement dans le développement web.</p>
+            <p>Je pratique également la photographie depuis que je suis petite, j'ai pû "concevoir" un site ou plutôt un blog où je retrace mes voyages. </p>
+            <div id="blog">
+                <a href="k.html">Blog en cours de création</a></div>
+            <h2> Mes langages </h2>
+            <img class="log" alt="html" src="img/logo/navigateur.png" width="5%">
+            <img class="log" alt="java" src="img/logo/java.png" width="5%">
+            <img class="log" alt="js" src="img/logo/javascript.png" width="5%">
+            <img class="log" alt="c#" src="img/logo/c-sharp.png" width="5%">
+            <img class="log" alt="sql" src="img/logo/sql.png" width="5%">
+        </div>
+    </div>
+    <script>
+        let nom = document.getElementById('nom');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            let valeur = window.scrollY;
+
+            nom.style.top = 20 + valeur * -0.1 + '%';
+            bird1.style.top = 30 + valeur * -1.5 + 'px';
+            bird1.style.left = valeur * 2 + 'px';
+            bird2.style.top = valeur * -1.5 + 'px';
+            bird2.style.left = valeur * -5 + 'px';
+            btn.style.marginTop = valeur * 1.5 + 'px';
+            rocks.style.top = valeur * -0.12 + 'px';
+            forest.style.top = valeur * 0.25 + 'px';
+            header.style.top = valeur * 0.5 + 'px';
+
+        })
+        jQuery(function() {
+            $(function() {
+                $(window).scroll(function() { //Fonction appelée quand on descend la page
+                    if ($(this).scrollTop() > 200) { // Quand on est à 200pixels du haut de page,
+                        $('#scrollUp').css('right', '10px'); // Replace à 10pixels de la droite l'image
+                    } else {
+                        $('#scrollUp').removeAttr('style'); // Enlève les attributs CSS affectés par javascript
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

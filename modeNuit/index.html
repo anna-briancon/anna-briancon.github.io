@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <title>Portfolio ▪️ Anna Briançon</title>
-    <link rel="stylesheet" type="text/css" href="format.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styleProjet.css">
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js">
     </script>
+    <script src="app.js"></script>
 </head>
 
 <body>
 
-    <!--Navigation-->
+
     <header id="header">
-        <a href="modeNuit/index.html" class="logo"><img src="img/icon.png" width="80%"></a>
+        <a href="https://anna-briancon.github.io/portfolio/index.html" class="logo"><img src="img/icon.png" width="80%"></a>
         <ul>
             <li><a href="#" class="active">Accueil </a></li>
             <li><a href="#projet">Projets </a></li>
@@ -24,19 +24,19 @@
             <li><a href="#">Contacts </a></li>
         </ul>
     </header>
-    <!--Bandeau-->
     <section>
+        <img src="img/nuit/fond.png" id="nuit">
+        <img src="img/nuit/etoiles.png" id="etoiles">
+
         <h1 id="nom"><span>Anna Briançon</span>Etudiante en informatique</h1>
-        <img src="img/bird1.png" id="bird1">
-        <img src="img/bird2.png" id="bird2">
-        <img src="img/forest.png" id="forest">
+        <img src="img/nuit/lune.png" id="lune">
 
         <a href="#projet" id="btn">Projets</a>
         <img src="img/rocks.png" id="rocks">
         <img src="img/water.png" id="water">
     </section>
 
-    <!--Projets-->
+
     <div id="projet">
         <div id="scrollUp">
             <a href="#top"><img src="img/fleche.png" /></a>
@@ -45,15 +45,16 @@
         <div class="reveal reveal-visible">
             <div id="Java">
                 <h3><span id="nomPro">Java</span> | Pong, Lowatem, Snake</h3>
-                <a class="Droite " href="pong.html">
+                <a class="Droite" href="pong.html">
                     <p>Pong</p>
                     <img id="imgPong" src="img/pong.png" width=auto>
                 </a>
-                <a class="Gauche " href="lowatem.html">
+
+                <a class="Gauche" href="lowatem.html">
                     <img id="imgLowatem" src="img/lowatem.png" width=auto>
                     <p>Lowatem</p>
                 </a>
-                <a class="Droite  " href="snake.html">
+                <a class="Droite" href="snake.html">
                     <p>Snake</p>
                     <!--<p>Création d'un jeu pour des lycéens</p>-->
                     <img id="imgJpo" src="img/jpo.png" width=auto>
@@ -111,25 +112,23 @@
 
 
         <script>
-            /*Animation éléments lors du scroll*/
             let nom = document.getElementById('nom');
-            let bird1 = document.getElementById('bird1');
-            let bird2 = document.getElementById('bird2');
+            let nuit = document.getElementById('nuit');
+            let etoiles = document.getElementById('etoiles');
+            let lune = document.getElementById('lune');
             let btn = document.getElementById('btn');
             let rocks = document.getElementById('rocks');
             let forest = document.getElementById('forest');
             let water = document.getElementById('water');
             let header = document.getElementById('header');
 
-
             window.addEventListener('scroll', function() {
                 let valeur = window.scrollY;
 
-                nom.style.top = 30 + valeur * -0.1 + '%';
-                bird1.style.top = 30 + valeur * -1.5 + 'px';
-                bird1.style.left = valeur * 2 + 'px';
-                bird2.style.top = valeur * -1.5 + 'px';
-                bird2.style.left = valeur * -5 + 'px';
+                nom.style.top = 40 + valeur * -0.1 + '%';
+                nuit.style.top = valeur * 0.5 + 'px';
+                etoiles.style.top = 40 + valeur * 1 + 'px';
+                lune.style.marginTop = valeur * 0.7 + 'px';
                 btn.style.marginTop = valeur * 1.5 + 'px';
                 rocks.style.top = valeur * -0.12 + 'px';
                 forest.style.top = valeur * 0.25 + 'px';
@@ -137,7 +136,6 @@
 
             })
 
-            //Fonction pour faire remonter la page
             jQuery(function() {
                 $(function() {
                     $(window).scroll(function() { //Fonction appelée quand on descend la page
@@ -149,23 +147,6 @@
                     });
                 });
             });
-
-            // animation projets fondu
-            const slidingNewsletter = document.querySelector('.reveal');
-
-            window.addEventListener('scroll', () => {
-                const {
-                    scrollTop,
-                    clientHeight
-                } = document.documentElement;
-                const topElementToTopWiewport = slidingNewsletter.getBoundingClientRect().top;
-
-                if (scrollTop > (scrollTop + topElementToTopWiewport).toFixed() - clientHeight * 1) {
-                    slidingNewsletter.classList.add('reveal-visible');
-                } else {
-                    slidingNewsletter.classList.remove('reveal-visible');
-                }
-            })
         </script>
 </body>
 
