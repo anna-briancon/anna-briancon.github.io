@@ -127,6 +127,16 @@
         font-size: 3.5em;
         color: black;
         margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #projet h3 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    h1 span {
+        font-family: 'Courier New', Courier, monospace;
     }
     
     #projet p {
@@ -142,10 +152,26 @@
     
     #moi {
         font-size: 1.2em;
+        background-color: rgba(255, 235, 210, 0.445);
+        border-radius: 40px;
+        padding: 5%;
+    }
+    
+    #logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #content {
+        display: flex;
+    }
+    
+    #content p {
+        width: 70%;
     }
     
     .log {
-        margin-left: 10%;
+        margin-left: 5%;
         margin-top: 2%;
     }
     /*Contact*/
@@ -156,6 +182,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    
+    form input {
+        background-color: rgb(255, 255, 255);
     }
     
     #mail {
@@ -170,8 +200,8 @@
         left: 0%;
         z-index: 4;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
+    
+    #scrollUp img {}
     /* chargement */

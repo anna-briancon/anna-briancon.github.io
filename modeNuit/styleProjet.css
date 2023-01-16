@@ -27,6 +27,7 @@ h2 {
 .Droite>p {
     display: flex;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .Droite:hover {
@@ -47,6 +48,7 @@ h2 {
 .Gauche>p {
     display: flex;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .Gauche:hover {

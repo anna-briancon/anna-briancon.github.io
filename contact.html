@@ -37,12 +37,28 @@
         <div id="contact">
 
             <div id="mail">
-                <img src="img/logo/mail.png" width="20" alt="mail logo">
+                <img src="img/logo/mail.png" width="40" alt="mail logo">
                 <a href="mailto:anna.briancon44@gmail.com"> anna.briancon44@gmail.com </a>
             </div>
             <div id="reseau">
                 <a href="https://fr.linkedin.com/"><img src="img/logo/linkedin.png" width="50" alt="Logo Linkedin"></a>
             </div>
+            <form>
+                <div class="emailBox">
+                    <label for="emailAddress">Votre adresse mail :</label><br>
+                    <input id="emailAddress" type="email" size="64" maxLength="64" required placeholder="mail@gmail.com" pattern="anna.briancon44@gmail.com" title="Merci de fournir uniquement une adresse Best Startup Ever">
+                </div>
+                </br>
+
+                </br>
+                <div class="messageBox">
+                    <label for="message">Requête :</label><br>
+                    <textarea id="message" cols="80" rows="8" required placeholder="Message"></textarea>
+                </div>
+                </br>
+                <input type="submit" value="Envoyer la requête">
+            </form>
+
         </div>
     </div>
     <script>

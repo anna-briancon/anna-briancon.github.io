@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Portfolio ▪️ Anna Briançon</title>
-    <link rel="stylesheet" type="text/css" href="format.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="format.css">
     <link rel="stylesheet" type="text/css" href="styleProjet.css">
-
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
     </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -38,25 +38,77 @@
 
     <!--Projets-->
     <div id="projet">
+
         <div id="scrollUp">
             <a href="#top"><img src="img/fleche.png" /></a>
         </div>
         <h1><span>Projets</span></h1>
+        <!--menu burger boostrap-->
+        <div class="container mt-5">
+            <nav class="navbar fixed-bottom navbar-light" style="background-color: rgba(255, 255, 255, 0.699);">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#projet">Langages</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Java</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Bash">Bash</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Html">HTML,CSS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Python">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Sql">SQL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#C#">C#</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Reseau">Reseau</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <!---->
         <div class="reveal reveal-visible">
             <div id="Java">
+                <h2>Java</h2>
                 <h3><span id="nomPro">Java</span> | Pong, Lowatem, Snake</h3>
-                <a class="Droite " href="pong.html">
+                <a class="Droite " href="projet/pong.html">
                     <p>Pong</p>
                     <img id="imgPong" src="img/pong.png" width=auto>
                 </a>
-                <a class="Gauche " href="lowatem.html">
+
+                <a class="Gauche " href="projet/lowatem.html">
                     <img id="imgLowatem" src="img/lowatem.png" width=auto>
                     <p>Lowatem</p>
                 </a>
-                <a class="Droite  " href="snake.html">
+                <a class="Droite  " href="projet/snake.html">
                     <p>Snake</p>
                     <!--<p>Création d'un jeu pour des lycéens</p>-->
                     <img id="imgJpo" src="img/jpo.png" width=auto>
+
+                </a>
+                <a class="Gauche " href="projet/appliEnchere.html">
+                    <img id="imgEnchere" src="img/enchere.png" width=auto>
+                    <p>Application d'enchère</p>
+                </a>
+                <a class="Droite  " href="projet/labyrinthe.html">
+                    <p>Labyrinthe</p>
+                    <!--<p>Création d'un jeu pour des lycéens</p>-->
+                    <img id="imglab" src="img/labyrinthe.png" width=auto>
 
                 </a>
             </div>
@@ -65,11 +117,12 @@
                 <h2>Système</h2>
                 <h3><span id="nomPro">Bash |</span> Installation d'une machine virtuelle, Automatisation de page web</h3>
 
-                <a class="Gauche" href="InstallationPoste.html">
+                <a class="Gauche" href="projet/InstallationPoste.html">
                     <img id="imgPoste" src="img/poste.png" width=auto>
                     <p>Installation d'une machine virtuelle</p>
                 </a>
-                <a class="Droite" href="autoPageWeb.html">
+
+                <a class="Droite" href="projet/autoPageWeb.html">
                     <p>Automatisation de page web</p>
                     <img id="imgBash" src="img/bash.png" width=auto>
                 </a>
@@ -79,19 +132,41 @@
 
             <div id="Html">
                 <h2>Web</h2>
-                <h3><span id="nomPro">HTML, CSS, JS</span> | Beer & Bear</h3>
+                <h3><span id="nomPro">HTML, CSS</span> | Beer & Bear</h3>
 
-                <a class="Gauche" href="B&B.html">
+                <a class="Gauche" href="projet/B&B.html">
                     <img id="imgSite" src="img/site.png" width=auto>
                     <p>Beer & Bear</p>
                 </a>
-            </div>
 
+                <h3><span id="nomPro">Python, HTML, CSS </span> | CaféPierre</h3>
+                <a class="Droite" href="projet/cafePierre.html">
+                    <p>CaféPierre</p>
+
+                    <img id="imgSite" src="img/o.png" alt="imgCafePierre" width=auto>
+                </a>
+            </div>
+            <div id="Python">
+                <h2>Python</h2>
+                <h3><span id="nomPro">Python</span> | Crypto : RSA</h3>
+
+                <a class="Gauche" href="projet/RSA.html">
+                    <img id="imgSite" src="img/rsa.png" width=auto>
+                    <p>Crypto RSA</p>
+                </a>
+
+                <h3><span id="nomPro">Python, HTML, CSS </span> | CaféPierre</h3>
+                <a class="Droite" href="projet/cafePierre.html">
+                    <p>CaféPierre</p>
+
+                    <img id="imgSite" src="img/o.png" alt="imgCafePierre" width=auto>
+                </a>
+            </div>
             <div id="Sql">
                 <h2>Base de donnée</h2>
                 <h3><span id="nomPro">SQL</span> | Grave et cie</h3>
 
-                <a class="Droite" href="GraveEtCie.html">
+                <a class="Droite" href="projet/GraveEtCie.html">
                     <p>Grave et cie</p>
                     <img id="imgVin" src="img/vin.png" width=auto>
                 </a>
@@ -101,10 +176,19 @@
                 <h2>C#</h2>
                 <h3><span id="nomPro">C#</span> | 6 qui prend</h3>
 
-                <a class="Gauche" href="6quiprend.html">
+                <a class="Gauche" href="projet/6quiprend.html">
                     <img id="imgQuiPrend" src="img/Maquette.PNG" width=auto>
                     <p>6 qui prend </p>
 
+                </a>
+            </div>
+            <div id="Reseau">
+                <h2>Réseau</h2>
+                <h3><span id="nomPro">Reseau</span> | Serveur DNS</h3>
+
+                <a class="Droite" href="projet/reseauDNS.html">
+                    <p>Serveur DNS</p>
+                    <img id="imgQuiPrend" src="img/reseaudns.PNG" width=auto>
                 </a>
             </div>
         </div>
@@ -141,7 +225,7 @@
             jQuery(function() {
                 $(function() {
                     $(window).scroll(function() { //Fonction appelée quand on descend la page
-                        if ($(this).scrollTop() > 200) { // Quand on est à 200pixels du haut de page,
+                        if ($(this).scrollTop() > 520) { // Quand on est à 520pixels du haut de page,
                             $('#scrollUp').css('right', '10px'); // Replace à 10pixels de la droite l'image
                         } else {
                             $('#scrollUp').removeAttr('style'); // Enlève les attributs CSS affectés par javascript
