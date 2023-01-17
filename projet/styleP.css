@@ -5,6 +5,7 @@ html {
     z-index: 0;
     width: auto;
     max-width: 100%;
+    color: antiquewhite;
 }
 
 h1 {
@@ -24,8 +25,8 @@ h2 {
     flex-wrap: wrap;
     padding: 2em;
     align-items: center;
-    margin: 2%;
-    background-color: #c3c3c3a0;
+    margin: 0 10%;
+    background-color: #000000ad;
     border-radius: 10px;
     margin-bottom: 2%;
 }
@@ -34,7 +35,7 @@ h2 {
     font-family: basier-circle, Helvetica, arial, sans-serif;
     padding: 10px;
     margin: auto;
-    width: 30em;
+    width: 40em;
     height: auto;
 }
 
