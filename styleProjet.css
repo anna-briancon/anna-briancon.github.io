@@ -14,6 +14,10 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+#projet * {
+    font-weight: bold;
+}
+
 .Droite {
     margin-left: 5%;
     margin-right: 5%;

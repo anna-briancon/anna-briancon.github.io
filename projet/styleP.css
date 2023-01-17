@@ -5,6 +5,7 @@ html {
     z-index: 0;
     width: auto;
     max-width: 100%;
+    color: white;
 }
 
 h1 {
@@ -25,7 +26,7 @@ h2 {
     padding: 2em;
     align-items: center;
     margin: 2%;
-    background-color: #c3c3c3a0;
+    background-color: #00000066;
     border-radius: 10px;
     margin-bottom: 2%;
 }
