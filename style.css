@@ -116,25 +116,6 @@
         transform: translateY(90px);
     }
     
-    #projet {
-        position: relative;
-        padding: 100px;
-        background: rgb(95, 171, 192);
-        ;
-    }
-    
-    #projet h1 {
-        font-size: 3.5em;
-        color: black;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    #projet h3 {
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
     h1 span {
         font-family: 'Courier New', Courier, monospace;
     }
