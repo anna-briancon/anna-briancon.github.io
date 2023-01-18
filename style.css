@@ -119,11 +119,6 @@
     h1 span {
         font-family: 'Courier New', Courier, monospace;
     }
-    
-    #projet p {
-        font-size: 1em;
-        color: black;
-    }
     /*moi*/
     
     #blog {
@@ -131,11 +126,17 @@
         margin-bottom: 2%;
     }
     
-    #moi {
+    #moi,
+    #contact {
         font-size: 1.2em;
-        background-color: rgba(255, 235, 210, 0.445);
+        background-color: #00000066;
         border-radius: 40px;
         padding: 5%;
+    }
+    
+    #moi *,
+    #contact * {
+        color: white;
     }
     
     #logo {
@@ -155,6 +156,13 @@
         margin-left: 5%;
         margin-top: 2%;
     }
+    
+    #profil {
+        margin-left: 5%;
+        border-radius: 100%;
+        width: 20%;
+        height: 20%;
+    }
     /*Contact*/
     
     #contact {
@@ -172,6 +180,27 @@
     #mail {
         margin-bottom: 2%;
         font-size: 2.5em;
+    }
+    
+    #mail a {
+        text-decoration: none;
+    }
+    
+    #mail a:hover {
+        color: rgb(95, 171, 192);
+    }
+    
+    .container h2 {
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    
+    .form-group {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
     /*Bouton retour en haut*/
     

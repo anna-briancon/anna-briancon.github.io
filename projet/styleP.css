@@ -3,9 +3,8 @@ html {
     background-color: rgb(95, 171, 192);
     background-image: linear-gradient(to bottom, rgb(95, 171, 192), rgb(1, 74, 94));
     z-index: 0;
-    width: auto;
-    max-width: 100%;
     color: white;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -19,23 +18,35 @@ h2 {
     text-align: center;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 #corp {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 2em;
+    padding: 0 8em;
     align-items: center;
     margin: 2%;
     background-color: #00000066;
     border-radius: 10px;
-    margin-bottom: 2%;
 }
 
 .case {
     font-family: basier-circle, Helvetica, arial, sans-serif;
     padding: 10px;
     margin: auto;
-    width: 40em;
+    width: 15em;
     height: auto;
 }
 
@@ -50,8 +61,7 @@ a>img {
 }
 
 #img {
-    display: flex;
-    justify-content: center;
+    margin-right: 1%;
 }
 
 #retour {
@@ -59,8 +69,9 @@ a>img {
 }
 
 #telecharger {
-    margin: 1% 3%;
-    width: 3%;
+    width: 2%;
+    margin: 2%;
+    margin-left: 4%;
 }
 
 @media screen and (max-width: 820px) {
