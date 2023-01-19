@@ -13,6 +13,9 @@
         header ul li a {
             font-size: 1.8vh;
         }
+        #projet p {
+            font-size: 1.5em;
+        }
         #projet * {
             font-size: 1.2em;
         }
