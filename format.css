@@ -1,10 +1,28 @@
-/*Téléphone*/
-
-
-/*
-@media screen and (max-width: 414px) {
-    section img {
-        width: 2000vh;
-        height: 1500px;
+ /*téléphone en portrait*/
+ @media screen and (min-width: 340px) and (orientation: portrait) {
+    header ul li a {
+        font-size: 1.8vh;
     }
-}*/
+    #Droite img{
+        width: 50%;
+    }
+    #Gauche img{
+        width: 50%;
+    }
+
+ }
+ /*téléphone landscape*/
+ @media screen and (min-width: 340px) and (min-height:200px) and (max-height:500px) and (orientation: landscape) {
+     
+ }
+ 
+ /*tablette portrait*/
+ @media screen and (min-width: 500px) and (orientation: portrait) {
+     
+ }
+ 
+ 
+ /*tablette landscape*/
+ @media screen and (min-width: 800px) and (max-width:1080px)and (orientation: landscape) {
+     
+ }
