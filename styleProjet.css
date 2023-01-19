@@ -2,6 +2,7 @@
     position: relative;
     padding: 100px;
     background-image: linear-gradient(to bottom, rgb(95, 171, 192), rgb(1, 74, 94));
+    min-height: 60vh;
 }
 
 #projet * {
@@ -44,43 +45,46 @@ h2 {
     font-weight: bold;
 }
 
-.Droite {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 2%;
-    padding: 2%;
-    display: flex;
-    justify-content: space-around;
-    height: 50vh;
-}
-
-.Droite p {
-    display: flex;
-    align-items: center;
-    font-family: "Courier New", Courier, monospace;
-}
-
-.Droite:hover {
-    background-color: rgba(255, 255, 255, 0.218);
-    border-radius: 40px;
-}
-
+.Droite,
 .Gauche {
-    margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 2%;
     padding: 2%;
     display: flex;
     justify-content: space-around;
-    height: 50vh;
 }
 
-.Gauche>p {
+.Gauche,
+.Droite {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.Gauche .imgProjet,
+.Droite .imgProjet {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.Droite p,
+.Gauche p {
     display: flex;
     align-items: center;
     font-family: "Courier New", Courier, monospace;
+    text-decoration: none;
+    font-size: 5em;
 }
 
+.Droite *,
+.Gauche * {
+    color: white;
+    text-decoration: none;
+}
+
+.Droite:hover,
 .Gauche:hover {
     background-color: rgba(255, 255, 255, 0.218);
     border-radius: 40px;

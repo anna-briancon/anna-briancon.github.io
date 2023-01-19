@@ -1,28 +1,40 @@
- /*téléphone en portrait*/
- @media screen and (min-width: 340px) and (orientation: portrait) {
-    header ul li a {
-        font-size: 1.8vh;
+    /*téléphone en portrait*/
+    
+    @media screen and (min-width: 340px) and (orientation: portrait) {
+        section {
+            height: 40vh;
+        }
+        section #nom {
+            font-size: 3em;
+        }
+        section #nom span {
+            font-size: 4em;
+        }
+        header ul li a {
+            font-size: 1.8vh;
+        }
+        #projet * {
+            font-size: 1.2em;
+        }
+        .Droite,
+        .Gauche {
+            height: 50vw;
+        }
+        .imgProjet {
+            width: 50vw;
+            height: fit-content;
+        }
     }
-    #Droite img{
-        width: 50%;
+    /*téléphone landscape*/
+    
+    @media screen and (min-width: 340px) and (min-height:200px) and (max-height:500px) and (orientation: landscape) {}
+    /*tablette portrait*/
+    
+    @media screen and (min-width: 500px) and (orientation: portrait) {
+        section {
+            height: 60vh;
+        }
     }
-    #Gauche img{
-        width: 50%;
-    }
-
- }
- /*téléphone landscape*/
- @media screen and (min-width: 340px) and (min-height:200px) and (max-height:500px) and (orientation: landscape) {
-     
- }
- 
- /*tablette portrait*/
- @media screen and (min-width: 500px) and (orientation: portrait) {
-     
- }
- 
- 
- /*tablette landscape*/
- @media screen and (min-width: 800px) and (max-width:1080px)and (orientation: landscape) {
-     
- }
+    /*tablette landscape*/
+    
+    @media screen and (min-width: 800px) and (max-width:1080px)and (orientation: landscape) {}
