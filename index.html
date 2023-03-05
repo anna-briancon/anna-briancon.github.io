@@ -1,313 +1,384 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio ▪️ Anna Briançon</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="format.css">
-    <link rel="stylesheet" type="text/css" href="styleProjet.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
-    </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-<style>
-    .Droite::before,
-    .Gauche::before {
-        transform: scaleX(0);
-        transform-origin: bottom right;
-    }
-    
-    .Gauche #projet p:hover {
-        font-size: 5rem;
-    }
-    
-    .Droite:hover::before,
-    .Gauche:hover::before {
-        margin-left: 0;
-        margin-right: 0;
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-    
-    .Droite::before,
-    .Gauche::before {
-        content: " ";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        inset: 0 0 0 0;
-        background: #5ae1ff68;
-        z-index: -1;
-        transition: transform .6s ease;
-        animation-name: example;
-        animation-duration: 4s;
-    }
-    
-    .Droite,
-    .Gauche {
-        position: relative;
-    }
-    
-    @media (orientation: landscape) {
-        body {
-            grid-auto-flow: column;
-        }
-    }
-</style>
+    <link rel="icon" href="assets/projet/icon/portfolio.png" type="image/icon type">
 
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/profil.png"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Anna Briançon</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Accueil </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">Moi </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projets
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Accueil </a>
+            </li>
 
-    <!--Navigation-->
-    <header id="header">
-        <a href="modeNuit/index.html" class="logo"><img src="img/icon.png" width="80%"></a>
-        <ul>
-            <li><a href="#" class="active">Accueil </a></li>
-            <li><a href="#projet">Projets </a></li>
-            <li><a href="moi.html">Moi </a></li>
-            <li><a href="contact.html">Contacts </a></li>
-        </ul>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> Moi </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projets </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <!--Bandeau-->
-    <section>
-        <h1 id="nom"><span>Anna Briançon</span>Etudiante en informatique</h1>
-        <img src="img/bird1.png" id="bird1">
-        <img src="img/bird2.png" id="bird2">
-        <img src="img/forest.png" id="forest">
-
-        <a href="#projet" id="btn">Projets</a>
-        <img src="img/rocks.png" id="rocks">
-        <img src="img/water.png" id="water">
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Hey! je m'appelle Anna Briançon</h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            Je suis étudiante en BUT informatique à Bordeaux.
+          </p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./index.html#projects" class="btn btn--bg">Projets</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="./assets/png/linkedin-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://github.com/anna-briancon" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="./assets/png/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="assets/CV_Anna_Briancon.pdf" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="assets/png/cv-ico.png"
+              alt="CV"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
     </section>
-
-    <!--Projets-->
-    <div id="projet">
-
-        <div id="scrollUp">
-            <a href="#top"><img src="img/fleche.png" /></a>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">A propos</span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                Bonjour je m'appelle <strong>Anna Briançon</strong>, j'ai 20 ans et je suis actuellement en deuxième année de <strong>BUT informatique</strong>.
+                Après avoir passée un bac STI2D option SIN (Système d'Information et Numérique), j'ai décidé d'intégrer le BUT informatique 
+                de Bordeaux. Aimant l'aventure, venir à Bordeaux était pour moi, une oportunité car venant de Nantes j'ai pû découvrir une nouvelle 
+                ville et rencontrée de nouvelles personnes.
+              </p>
+              <p class="about__content-details-para">
+                Depuis 5 ans maintenant, je me suis découvert une passion dans l'informatique plus particulierement dans le <strong>développement web</strong>. 
+                Je pratique également la photographie depuis que je suis petite, j'ai pû "concevoir" un site ou plutôt un blog où je retrace mes voyages. 
+              </p>
+            </div>
+            <a href="./index.html/#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">Mes compétences</h3>
+            <div class="skills">
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">.Net</div>
+              <div class="skills__skill">PHP</div>
+              <div class="skills__skill">GIT</div>
+              <div class="skills__skill">SQL</div>
+              <div class="skills__skill">Java</div>
+              <div class="skills__skill">C#</div>
+              <div class="skills__skill">C</div>
+              <div class="skills__skill">Bash</div>
+              <div class="skills__skill">Méthodologie SCRUM</div>
+              <div class="skills__skill">UML</div>
+            </div>
+            <h3 class="about__content-title">Social</h3>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/logo-linkedin.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/anna-briancon" target="_blank">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-        <h1><span>Projets</span></h1>
-        <!--menu burger boostrap-->
-        <div class="container mt-5">
-            <nav class="navbar fixed-bottom navbar-light" style="background-color: rgba(255, 255, 255, 0.699);">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#projet">Langages</a>
-                    <!--Bouton-->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!--Lien-->
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Java</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Bash">Bash</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Html">HTML,CSS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#PHP">PHP</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Python">Python</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Sql">SQL</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#C#">C#</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Reseau">Reseau</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+      </div>
+    </section>
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projets</span>
+          <span class="heading-sec__sub">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
+            tempora explicabo quae quod deserunt eius sapiente
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+              src="./assets/projet/pageNetflop.png"
+              alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Netflop</h3>
+              <div class="skills">
+                <div class="skills__skill">PHP</div>
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">SCRUM</div>
+              </div>
+              <p class="projects__row-content-desc">
+                Netflop est une application web qui permet de gérer des films et des séries.
+                Elle permet également de noter les films et de les commenter. 
+              </p>
+              <a
+                href="./netflop.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >En savoir plus</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/projet/B&B.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Beer & Bear</h3>
+              <div class="skills">
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+              </div>
+              <p class="projects__row-content-desc">
+                Réalisation d'un site vitrine pour une entreprise fictive.
+              </p>
+              <a
+                href="./B&B.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >En savoir plus</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/projet/cafeePierre3.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">CaféPierre</h3>
+              <div class="skills">
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">Méthode agile</div>
+              </div>
+              <p class="projects__row-content-desc">
+                Réalisation d'un site permettant de visualiser des données environnemental 
+              </p>
+              <a
+                href="./caféPierre.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >En savoir plus</a
+              >
+            </div>
+          </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        <!---->
-        <div class="reveal reveal-visible">
-            <div id="Java">
-                <h2>Java</h2>
-                <h3><span id="nomPro">Java</span> | Pong, Lowatem, Snake</h3>
-                <a class="Droite " href="projet/pong.html">
-                    <p>Pong</p>
-                    <img class="imgProjet" src="img/pong.png" width=auto>
-                </a>
-
-                <a class="Gauche " href="projet/lowatem.html">
-                    <img class="imgProjet" src="img/lowatem.png" width=auto>
-                    <p>Lowatem</p>
-                </a>
-                <a class="Droite  " href="projet/snake.html">
-                    <p>Snake</p>
-                    <!--<p>Création d'un jeu pour des lycéens</p>-->
-                    <img class="imgProjet" src="img/jpo.png" width=auto>
-
-                </a>
-                <a class="Gauche " href="projet/appliEnchere.html">
-                    <img class="imgProjet" src="img/enchere.jpg" width=auto>
-                    <p>Application d'enchère</p>
-                </a>
-                <a class="Droite  " href="projet/labyrinthe.html">
-                    <p>Labyrinthe</p>
-                    <!--<p>Création d'un jeu pour des lycéens</p>-->
-                    <img class="imgProjet" src="img/labyrinthe.png" width=auto>
-
-                </a>
+      </div>
+    </section>
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            N'hésitez pas à me contacter via LinkedIn ou par mail.
+          </span>
+          <span class="heading-sec__sub heading-sec__sub--lt"><a href="mailto:anna.briancon33@gmail.com"><strong>anna.briancon33@gmail.com</strong></a></span>
+        </h2>
+        <div class="contact__form-container">
+          <form action="#" class="contact__form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Nom</label>
+              <input
+                required
+                placeholder="Entrer votre nom"
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+              />
             </div>
-
-            <div id="Bash">
-                <h2>Système</h2>
-                <h3><span id="nomPro">Bash |</span> Installation d'une machine virtuelle, Automatisation de page web</h3>
-
-                <a class="Gauche" href="projet/InstallationPoste.html">
-                    <img class="imgProjet" src="img/poste.png" width=auto>
-                    <p>Installation d'une machine virtuelle</p>
-                </a>
-
-                <a class="Droite" href="projet/autoPageWeb.html">
-                    <p>Automatisation de page web</p>
-                    <img class="imgProjet" src="img/bash.png" width=auto>
-                </a>
-
-
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                required
+                placeholder="Entrer votre mail"
+                type="text"
+                class="contact__form-input"
+                name="email"
+                id="email"
+              />
             </div>
-
-            <div id="Html">
-                <h2>Web</h2>
-                <h3><span id="nomPro">HTML, CSS</span> | Beer & Bear</h3>
-
-                <a class="Gauche" href="projet/B&B.html">
-                    <img class="imgProjet" src="img/site.png" width=auto>
-                    <p>Beer & Bear</p>
-                </a>
-                <h3><span id="nomPro">Python, HTML, CSS </span> | CaféPierre</h3>
-                <a class="Droite" href="projet/cafePierre.html">
-                    <p>CaféPierre</p>
-                    <img class="imgProjet" src="img/cafeePierre2.png" alt="imgCafePierre" width=50%>
-                </a>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Entrer votre message"
+                name="message"
+                id="message"
+              ></textarea>
             </div>
-            <div id="PHP">
-                <h2>PHP</h2>
-                <h3><span id="nomPro">PHP</span> | Netflop</h3>
-                <a class="Gauche" href="projet/netflop.html">
-                    <img class="imgProjet" src="img/pageNetflop.png" width=auto>
-                    <p>Netflop</p>
-                </a>
-            </div>
-            <div id="Python">
-                <h2>Python</h2>
-                <h3><span id="nomPro">Python</span> | Crypto : RSA</h3>
-
-                <a class="Gauche" href="projet/RSA.html">
-                    <img class="imgProjet" src="img/RSA.png" width=auto>
-                    <p>Crypto RSA</p>
-                </a>
-
-                <h3><span id="nomPro">Python, HTML, CSS </span> | CaféPierre</h3>
-                <a class="Droite" href="projet/cafePierre.html">
-                    <p>CaféPierre</p>
-                    <img class="imgProjet" src="img/cafeePierre2.png" alt="imgCafePierre" width=50%>
-                </a>
-            </div>
-            <div id="Sql">
-                <h2>Base de donnée</h2>
-                <h3><span id="nomPro">SQL</span> | Grave et cie</h3>
-
-                <a class="Droite" href="projet/GraveEtCie.html">
-                    <p>Grave et cie</p>
-                    <img class="imgProjet" src="img/vin.png" width=auto>
-                </a>
-            </div>
-
-            <div id="C#">
-                <h2>C#</h2>
-                <h3><span id="nomPro">C#</span> | 6 qui prend</h3>
-
-                <a class="Gauche" href="projet/6quiprend.html">
-                    <img class="imgProjet" src="img/Maquette.PNG" width=auto>
-                    <p>6 qui prend </p>
-
-                </a>
-            </div>
-            <div id="Reseau">
-                <h2>Réseau</h2>
-                <h3><span id="nomPro">Reseau</span> | Serveur DNS</h3>
-
-                <a class="Droite" href="projet/reseauDNS.html">
-                    <p>Serveur DNS</p>
-                    <img class="imgProjet" src="img/dns.png" width=auto>
-                </a>
-            </div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Envoyer
+            </button>
+          </form>
         </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/anna-briancon" target="_blank">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="assets/CV_Anna_Briancon.pdf" target="_blank">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/cv-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Anna Briançon</h4>
+            <p class="main-footer__short-desc">
+              Etudiante BUT informatique 
+            </p>
+          </div>
 
-        <!--
-        <script>
-            /*Animation éléments lors du scroll*/
-            let nom = document.getElementById('nom');
-            let bird1 = document.getElementById('bird1');
-            let bird2 = document.getElementById('bird2');
-            let btn = document.getElementById('btn');
-            let rocks = document.getElementById('rocks');
-            let forest = document.getElementById('forest');
-            let water = document.getElementById('water');
-            let header = document.getElementById('header');
+        </div>
+      </div>
+    </footer>
 
-
-            window.addEventListener('scroll', function() {
-                let valeur = window.scrollY;
-
-                nom.style.top = 30 + valeur * -0.1 + '%';
-                bird1.style.top = 30 + valeur * -1.5 + 'px';
-                bird1.style.left = valeur * 2 + 'px';
-                bird2.style.top = valeur * -1.5 + 'px';
-                bird2.style.left = valeur * -5 + 'px';
-                btn.style.marginTop = valeur * 1.5 + 'px';
-                rocks.style.top = valeur * -0.12 + 'px';
-                forest.style.top = valeur * 0.25 + 'px';
-                header.style.top = valeur * 0.5 + 'px';
-
-            })
-
-            //Fonction pour faire remonter la page
-            jQuery(function() {
-                $(function() {
-                    $(window).scroll(function() { //Fonction appelée quand on descend la page
-                        if ($(this).scrollTop() > 520) { // Quand on est à 520pixels du haut de page,
-                            $('#scrollUp').css('right', '10px'); // Replace à 10pixels de la droite l'image
-                        } else {
-                            $('#scrollUp').removeAttr('style'); // Enlève les attributs CSS affectés par javascript
-                        }
-                    });
-                });
-            });
-
-            // animation projets fondu
-            const slidingNewsletter = document.querySelector('.reveal');
-
-            window.addEventListener('scroll', () => {
-                const {
-                    scrollTop,
-                    clientHeight
-                } = document.documentElement;
-                const topElementToTopWiewport = slidingNewsletter.getBoundingClientRect().top;
-
-                if (scrollTop > (scrollTop + topElementToTopWiewport).toFixed() - clientHeight * 1) {
-                    slidingNewsletter.classList.add('reveal-visible');
-                } else {
-                    slidingNewsletter.classList.remove('reveal-visible');
-                }
-            })
-        </script>-->
-</body>
-
+    <script src="./index.js"></script>
+  </body>
 </html>
