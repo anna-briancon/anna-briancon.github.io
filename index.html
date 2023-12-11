@@ -1,384 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio ▪️ Anna Briançon</title>
-    <link rel="icon" href="assets/projet/icon/portfolio.png" type="image/icon type">
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/png/profil.png"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">Anna Briançon</span>
-        </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Accueil </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">Moi </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">
-                Projets
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
-            </li>
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Accueil </a>
-            </li>
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Concert+One&family=Raleway:wght@200;900&family=Rethink+Sans:wght@400;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <title>Anna Briançon</title>
+</head>
 
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> Moi </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projets </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
-          </ul>
+<body>
+    <!-- <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div> -->
+    <header id="accueil">
+        <div class="navbar">
+            <div class="burger-menu" onclick="toggleNav()">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#projects">Projets </a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img
+                        src="assets/png/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/anna-briancon" target="_blank"><img src="assets/png/github.png"
+                        alt="Github"></a>
+                <a href="assets/CV_Anna_Briancon_2023.pdf" target="_blank"><img src="assets/png/cv.png" alt="CV"></a>
+            </div>
+            </ul>
         </div>
-      </div>
+        <div class="main-content">
+            <div class="name-section">
+                <h1>Anna Briançon</h1>
+            </div>
+            <div class="vertical-bar"></div>
+            <div class="about-section">
+                <div class="profile-section">
+                    <img src="assets/png/profil.png" alt="Votre photo">
+                    <h2 style="font-weight: 900;  text-transform: uppercase;  -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: black; color:#a68b74;"> Développeuse web - Fullstack</h2>
+
+                    <h2>Présentation</h2>
+                    <p>Enthousiaste, passionnée, et déterminée à repousser les limites de la créativité, je suis une
+                        développeuse Fullstack avec une passion profonde pour l'informatique, le design, et la
+                        photographie. <br>
+                        Ma mission est de fusionner l'art et la technologie pour créer des expériences numériques
+                        inoubliables. </p>
+                </div>
+                <div class="tools-section">
+                    <h2>Mes Outils</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Hey! je m'appelle Anna Briançon</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            Je suis étudiante en BUT informatique à Bordeaux.
-          </p>
-        </div>
-        <div class="home-hero__cta">
-          <a href="./index.html#projects" class="btn btn--bg">Projets</a>
-        </div>
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://github.com/anna-briancon" target="_blank" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="assets/CV_Anna_Briancon.pdf" target="_blank" class="home-hero__social-icon-link">
-            <img
-              src="assets/png/cv-ico.png"
-              alt="CV"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">A propos</span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                Bonjour je m'appelle <strong>Anna Briançon</strong>, j'ai 20 ans et je suis actuellement en deuxième année de <strong>BUT informatique</strong>.
-                Après avoir passée un bac STI2D option SIN (Système d'Information et Numérique), j'ai décidé d'intégrer le BUT informatique 
-                de Bordeaux. Aimant l'aventure, venir à Bordeaux était pour moi, une oportunité car venant de Nantes j'ai pû découvrir une nouvelle 
-                ville et rencontrée de nouvelles personnes.
-              </p>
-              <p class="about__content-details-para">
-                Depuis 5 ans maintenant, je me suis découvert une passion dans l'informatique plus particulierement dans le <strong>développement web</strong>. 
-                Je pratique également la photographie depuis que je suis petite, j'ai pû "concevoir" un site ou plutôt un blog où je retrace mes voyages. 
-              </p>
+    <div class="footer-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <main class="fade-in">
+        <div id="projects" class="projects-section">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid fade-in">
+                <div class="project-card fade-in">
+                    <img src="assets/projet/accueil_netflop.png" alt="Projet 1">
+                    <h3>Netflop</h3>
+                    <p>Netflop est une application web qui permet de gérer des films et des séries. Elle permet
+                        également de noter les films et de les commenter.</p>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="assets/projet/AndaLima.png" alt="Projet 2">
+                    <h3>AndaLima</h3>
+                    <p>Réalisation d'un site vitrine pour un restaurant pour des étudiants en hôtellerie-restauration
+                    </p>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="assets/png/placeholder.png" alt="Projet 3">
+                    <h3>CaféPierre</h3>
+                    <p>Une description du projet 3</p>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="assets/png/placeholder.png" alt="Projet 4">
+                    <h3>Projet 4</h3>
+                    <p>Une description du projet 4</p>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="assets/png/placeholder.png" alt="Projet 4">
+                    <h3>Projet 5</h3>
+                    <p>Une description du projet 5</p>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="assets/png/placeholder.png" alt="Projet 4">
+                    <h3>Projet 6</h3>
+                    <p>Une description du projet 6</p>
+                </div>
             </div>
-            <a href="./index.html/#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">Mes compétences</h3>
-            <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">React</div>
-              <div class="skills__skill">.Net</div>
-              <div class="skills__skill">PHP</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">SQL</div>
-              <div class="skills__skill">Java</div>
-              <div class="skills__skill">C#</div>
-              <div class="skills__skill">C</div>
-              <div class="skills__skill">Bash</div>
-              <div class="skills__skill">Méthodologie SCRUM</div>
-              <div class="skills__skill">UML</div>
-            </div>
-            <h3 class="about__content-title">Social</h3>
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/logo-linkedin.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/anna-briancon" target="_blank">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github.png"
-                  alt="icon"
-                />
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projets</span>
-          <span class="heading-sec__sub">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
-          </span>
-        </h2>
+        <div id="contact" class="contact-section">
+            <h2>Contactez-moi</h2>
+            <a href="mailto:anna.briancon33@gmail.com" class="email-link"> <img src="assets/png/email.png" width="10%"
+                    alt="Email">
+            </a>
+        </div>
 
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-              src="./assets/projet/pageNetflop.png"
-              alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Netflop</h3>
-              <div class="skills">
-                <div class="skills__skill">PHP</div>
-                <div class="skills__skill">HTML</div>
-                <div class="skills__skill">CSS</div>
-                <div class="skills__skill">GIT</div>
-                <div class="skills__skill">SCRUM</div>
-              </div>
-              <p class="projects__row-content-desc">
-                Netflop est une application web qui permet de gérer des films et des séries.
-                Elle permet également de noter les films et de les commenter. 
-              </p>
-              <a
-                href="./netflop.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >En savoir plus</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projet/B&B.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Beer & Bear</h3>
-              <div class="skills">
-                <div class="skills__skill">HTML</div>
-                <div class="skills__skill">CSS</div>
-              </div>
-              <p class="projects__row-content-desc">
-                Réalisation d'un site vitrine pour une entreprise fictive.
-              </p>
-              <a
-                href="./B&B.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >En savoir plus</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projet/cafeePierre3.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">CaféPierre</h3>
-              <div class="skills">
-                <div class="skills__skill">Python</div>
-                <div class="skills__skill">HTML</div>
-                <div class="skills__skill">CSS</div>
-                <div class="skills__skill">Méthode agile</div>
-              </div>
-              <p class="projects__row-content-desc">
-                Réalisation d'un site permettant de visualiser des données environnemental 
-              </p>
-              <a
-                href="./caféPierre.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >En savoir plus</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            N'hésitez pas à me contacter via LinkedIn ou par mail.
-          </span>
-          <span class="heading-sec__sub heading-sec__sub--lt"><a href="mailto:anna.briancon33@gmail.com"><strong>anna.briancon33@gmail.com</strong></a></span>
-        </h2>
-        <div class="contact__form-container">
-          <form action="#" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Nom</label>
-              <input
-                required
-                placeholder="Entrer votre nom"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Entrer votre mail"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Entrer votre message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Envoyer
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/anna-briancon" target="_blank">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="assets/CV_Anna_Briancon.pdf" target="_blank">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/cv-ico.png"
-                  alt="icon"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">Anna Briançon</h4>
-            <p class="main-footer__short-desc">
-              Etudiante BUT informatique 
-            </p>
-          </div>
+        <script src="script.js"></script>
+</body>
 
-        </div>
-      </div>
-    </footer>
-
-    <script src="./index.js"></script>
-  </body>
 </html>
