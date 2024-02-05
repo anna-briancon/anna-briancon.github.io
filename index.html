@@ -1,121 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>Anna Briançon - Portfolio</title>
+    <link rel="icon" href="assets/png/fondpdp.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Concert+One&family=Raleway:wght@200;900&family=Rethink+Sans:wght@400;700&family=Russo+One&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <title>Anna Briançon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div> -->
-    <header id="accueil">
-        <div class="navbar">
-            <div class="burger-menu" onclick="toggleNav()">☰</div>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#projects">Projets </a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img
-                        src="assets/png/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://github.com/anna-briancon" target="_blank"><img src="assets/png/github.png"
-                        alt="Github"></a>
-                <a href="assets/CV_Anna_Briancon_2023.pdf" target="_blank"><img src="assets/png/cv.png" alt="CV"></a>
-            </div>
-            </ul>
-        </div>
-        <div class="main-content">
-            <div class="name-section">
-                <h1>Anna Briançon</h1>
-            </div>
-            <div class="vertical-bar"></div>
-            <div class="about-section">
-                <div class="profile-section">
-                    <img src="assets/png/profil.png" alt="Votre photo">
-                    <h2 style="font-weight: 900;  text-transform: uppercase;  -webkit-text-stroke-width: 2px;
-                    -webkit-text-stroke-color: black; color:#a68b74;"> Développeuse web - Fullstack</h2>
 
-                    <h2>Présentation</h2>
-                    <p>Enthousiaste, passionnée, et déterminée à repousser les limites de la créativité, je suis une
-                        développeuse Fullstack avec une passion profonde pour l'informatique, le design, et la
-                        photographie. <br>
-                        Ma mission est de fusionner l'art et la technologie pour créer des expériences numériques
-                        inoubliables. </p>
-                </div>
-                <div class="tools-section">
-                    <h2>Mes Outils</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-            </div>
+    <header>
+        <div>
+            <img src="assets/png/logo.png" alt="Logo" class="logo">
+            <!-- <span>ABriançon</span> -->
         </div>
+        <button id="burger-btn">&#9776;</button>
+
+        <nav>
+            <a href="#presentation" class="nav-link">Présentation</a>
+            <a href="#projets" class="nav-link">Projets</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
 
     </header>
-    <div class="footer-bars">
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <main class="fade-in">
-        <div id="projects" class="projects-section">
-            <h2>Mes Projets</h2>
-            <div class="projects-grid fade-in">
-                <div class="project-card fade-in">
-                    <img src="assets/projet/accueil_netflop.png" alt="Projet 1">
-                    <h3>Netflop</h3>
-                    <p>Netflop est une application web qui permet de gérer des films et des séries. Elle permet
-                        également de noter les films et de les commenter.</p>
-                </div>
-                <div class="project-card fade-in">
-                    <img src="assets/projet/AndaLima.png" alt="Projet 2">
-                    <h3>AndaLima</h3>
-                    <p>Réalisation d'un site vitrine pour un restaurant pour des étudiants en hôtellerie-restauration
-                    </p>
-                </div>
-                <div class="project-card fade-in">
-                    <img src="assets/png/placeholder.png" alt="Projet 3">
-                    <h3>CaféPierre</h3>
-                    <p>Une description du projet 3</p>
-                </div>
-                <div class="project-card fade-in">
-                    <img src="assets/png/placeholder.png" alt="Projet 4">
-                    <h3>Projet 4</h3>
-                    <p>Une description du projet 4</p>
-                </div>
-                <div class="project-card fade-in">
-                    <img src="assets/png/placeholder.png" alt="Projet 4">
-                    <h3>Projet 5</h3>
-                    <p>Une description du projet 5</p>
-                </div>
-                <div class="project-card fade-in">
-                    <img src="assets/png/placeholder.png" alt="Projet 4">
-                    <h3>Projet 6</h3>
-                    <p>Une description du projet 6</p>
-                </div>
+
+    <div class="intro-container">
+        <video autoplay loop muted playsinline class="intro-video">
+            <source src="assets/video6.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la balise vidéo.
+        </video>
+
+        <div class="intro-content">
+            <div class="intro-text">
+                <p class="intro-text-1">Bonjour,</p>
+                <p class="intro-text-2">Je m'appelle <strong>Anna Briançon</strong></p>
+                <p class="intro-text-3">Développeuse Fullstack</p>
+            </div>
+
+            <div class="intro-reseaux">
+                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img class="intro-reseaux-image"
+                        src="assets/png/linkedin_B.png" alt="Linkedin"></a>
+                <a href="https://github.com/anna-briancon" target="_blank"><img class="intro-reseaux-image"
+                        src="assets/png/github_B.png" alt="Github"></a>
             </div>
         </div>
-        <div id="contact" class="contact-section">
-            <h2>Contactez-moi</h2>
-            <a href="mailto:anna.briancon33@gmail.com" class="email-link"> <img src="assets/png/email.png" width="10%"
-                    alt="Email">
-            </a>
+
+        <div class="image-container">
+            <img class="intro-image" src="assets/png/profil2.png" alt="Photo de profil">
+        </div>
+    </div>
+
+    <section id="presentation" class="presentation-section">
+        <!-- <p class="presentation-subtitle">Qui suis-je ?</p> -->
+
+        <h2 class="presentation-title">Présentation</h2>
+        <div class="divider"></div>
+
+        <div class="presentation-text">
+            <p>Enthousiaste, passionnée, et déterminée à repousser les limites de la créativité, je suis une
+                développeuse Fullstack avec une passion pour l'informatique, le design, et la
+                photographie.</p>
+            <p>J'ai travaillé sur plusieurs projets intéressants que vous pouvez découvrir ci-dessous. </p>
         </div>
 
-        <script src="script.js"></script>
+        <div class="competences-outils-section">
+            <div class="presentation-grid">
+                <div class="competences-section">
+                    <h3 class="competences-title">Compétences</h3>
+                    <div class="competences-grid">
+                        <div class="competence-box">HTML</div>
+                        <div class="competence-box">CSS</div>
+                        <div class="competence-box">JavaScript</div>
+                        <div class="competence-box">React</div>
+                        <div class="competence-box">Java</div>
+                        <div class="competence-box">Bash</div>
+                        <div class="competence-box">C#</div>
+                        <div class="competence-box">SQL</div>
+                        <div class="competence-box">PHP</div>
+                        <div class="competence-box">Python</div>
+                        <div class="competence-box">C++</div>
+                        <div class="competence-box">C</div>
+                    </div>
+                </div>
+                <div class="competences-section">
+                    <h3 class="competences-title">Outils</h3>
+                    <div class="competences-grid">
+                        <div class="competence-box">GIT</div>
+                        <div class="competence-box">VS Code</div>
+                        <div class="competence-box">NetBeans</div>
+                        <div class="competence-box">Vmware</div>
+                        <div class="competence-box">Photoshop</div>
+                        <div class="competence-box">Processing</div>
+
+                    </div>
+                    <h3 class="competences-title">CV</h3>
+                    <div class="cv-button">
+                        <a href="assets/CV_Anna_Briancon_2023.pdf" target="_blank">Téléchargez mon CV</a>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <section id="projets" class="projets-section">
+        <h2 class="presentation-title">Projets</h2>
+        <div class="divider"></div>
+
+        <div class="projets-filter">
+            <button onclick="filterProjects('all')">Tous</button>
+            <button onclick="filterProjects('web')">Web</button>
+            <button onclick="filterProjects('algorithmique')">Algorithmique</button>
+            <button onclick="filterProjects('database')">Base de données</button>
+            <button onclick="filterProjects('reseaux')">Systèmes Réseaux</button>
+            <button onclick="filterProjects('photo')">
+                <img src="assets/png/appareil-photo.png" alt="Appareil photo" class="icon-camera"> Photos
+            </button>
+                    </div>
+
+        <div class="projets-grid">
+            <div class="projet" data-category="web" onclick="showText('netflop-text')">
+                <img src="assets/projet/accueil_netflop.png" alt="Netflop">
+                <h3>Netflop</h3>
+            </div>
+            <div id="netflop-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('netflop-text')">&times;</span>
+
+                <h2>Netflop</h2>
+                <p>
+                    Application web permettant à chaque utilisateur de suivre les séries qu'il
+                    regarde ou d'en découvrir.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Application fonctionnant avec une base de données remplie grâce à l'API OMDB, affichage et ajout de
+                    données venant des utilisateurs, gestion des comptes utilisateurs.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Symfony</li>
+                    <li>Tailwinds</li>
+                    <li>méthode scrum</li>
+                    <li>UI/UX</li>
+                </ul>
+                <h3>Compétences</h3>
+                <p>
+                    Organisation d'équipe selon la méthode scrum, création d'une application Symfony complète.
+                </p>
+            </div>
+            <div class="projet" data-category="web" onclick="showText('beer-bear-text')">
+                <img src="assets/projet/B&B.png" alt="Beer&Bear">
+                <h3>Beer&Bear</h3>
+            </div>
+
+            <div id="beer-bear-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('beer-bear-text')">&times;</span>
+
+                <h2>Beer&Bear</h2>
+                <p>
+                    Réalisation d'un site pour une entreprise fictive. Un site ergonomique, au goût du jour et adapté à
+                    toutes tailles d'écran.
+                </p>
+                <h3>Résultat</h3>
+                <ul>
+                    <li>Un site web</li>
+                    <li>Une maquette de notre site</li>
+                </ul>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Création d'un site fixe et responsive</li>
+                    <li>Un site dans les tendances</li>
+                </ul>
+            </div>
+
+            <div class="projet" data-category="web" onclick="showText('andalima-text')">
+                <img src="assets/projet/AndaLima.png" alt="AndaLima">
+                <h3>AndaLima</h3>
+            </div>
+
+            <div id="andalima-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('andalima-text')">&times;</span>
+
+                <h2>AndaLima</h2>
+                <p>
+                    Réalisation d'un site web vitrine en collaboration avec des élèves d'une école de restauration
+                    hôtellerie.
+                </p>
+                <h3>Résultat</h3>
+                <ul>
+                    <li>Un site web</li>
+                </ul>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Création d'un site web vitrine</li>
+                    <li>Collaboration avec des élèves d'une école de restauration hôtellerie</li>
+                </ul>
+            </div>
+
+            <div class="projet" data-category="web" onclick="showText('cafepierre-text')">
+                <img src="assets/projet/cafeePierre3.png" alt="CaféPierre">
+                <h3>CaféPierre</h3>
+            </div>
+
+            <div id="cafepierre-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('cafepierre-text')">&times;</span>
+
+                <h2>CaféPierre</h2>
+                <p>
+                    Conception d'un site web de schémas sur l'environnement en groupe.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Site Web de CaféPierre.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Création d'un site web responsive</li>
+                    <li>Création d'un script python générant des graphiques</li>
+                    <li>Organisation d'une équipe</li>
+                </ul>
+            </div>
+
+
+            <div class="projet" data-category="algorithmique" onclick="showText('6quiprend-text')">
+                <img src="assets/projet/projet/6quiprend.png" alt="6 qui prend">
+                <h3>6 qui prend</h3>
+            </div>
+            <div id="6quiprend-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('6quiprend-text')">&times;</span>
+
+                <h2>6 qui prend !</h2>
+                <p>
+                    Projet en groupe pour réaliser le jeu "6 qui prend !" avec une interface graphique.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Jeu réalisé en C# avec la possibilité pour les joueurs de jouer à plusieurs sur un même ordinateur.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>Logique de programmation</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Création d'une application C#</li>
+                    <li>Intégration d'éléments graphiques interagissant avec la partie logique de l'application</li>
+                </ul>
+            </div>
+            <div class="projet" data-category="database" onclick="showText('graveetcompagnie-text')">
+                <img src="assets/projet/projet/graveetcie.png" alt="Grave et Cie">
+                <h3>Grave et Cie</h3>
+            </div>
+
+            <div id="graveetcompagnie-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('graveetcompagnie-text')">&times;</span>
+
+                <h2>Grave et Cie</h2>
+                <p>
+                    Projet visant à proposer une solution d’organisation d’inventaire pour une entreprise fictive de
+                    négoce Bordelais.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Réalisation d’un Modèle Conceptuel des Données (MCD) et d’un script de création de base de données.
+                    Élaboration de requêtes SQL, conception d'une maquette d’application avec ses fonctionnalités.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>WinDesign</li>
+                    <li>SQL Server Management Studio</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Création et utilisation d'une base de données</li>
+                    <li>Commandes SQL</li>
+                </ul>
+            </div>
+            <div class="projet" data-category="reseaux" onclick="showText('automatisationweb-text')">
+                <img src="assets/projet/projet/autopageweb.png" style="width: 60%; height: auto;"
+                    alt="Automatisation de Page Web">
+                <h3>Automatisation de Page Web</h3>
+            </div>
+
+            <div id="automatisationweb-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('automatisationweb-text')">&times;</span>
+
+                <h2>Automatisation de Page Web</h2>
+                <p>
+                    Projet axé sur la création d’un script automatisé générant des pages web à partir d’un “storyboard”
+                    préétabli.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Réalisation d'un script Bash fonctionnel permettant la création automatisée de pages web.
+                    Le fonctionnement du script est représenté à l'aide d'un schéma explicatif.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Bash</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Création d’un script Bash</li>
+                    <li>Utilisation de fonctions Bash pour intégrer des PDF et des bandes sonores</li>
+                </ul>
+            </div>
+            <div class="projet" data-category="reseaux" onclick="showText('installationposte-text')">
+                <img src="assets/projet/projet/installationposte.png" alt="Installation de Poste">
+                <h3>Installation de Poste</h3>
+            </div>
+
+            <div id="installationposte-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('installationposte-text')">&times;</span>
+
+                <h2>Installation de Poste</h2>
+                <p>
+                    Projet consistant en l'installation complète d'une machine virtuelle Linux. Les logiciels tels que
+                    Vscode, Rust,
+                    un bureau XFCE, et Git ont été intégrés à l'environnement.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Le rapport du projet a été élaboré par Genetet Maud et Menier Thomas, détaillant les différentes
+                    étapes de
+                    l'installation.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>VMWare</li>
+                    <li>Rust</li>
+                    <li>Rust-analyzer</li>
+                    <li>Bash</li>
+                    <li>Git</li>
+                    <li>Xubuntu</li>
+                    <li>Vscode</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Installation d'un système d'exploitation</li>
+                    <li>Étude des logiciels et implémentation</li>
+                    <li>Création d'une architecture logicielle</li>
+                    <li>Installation des périphériques</li>
+                    <li>Attribution des droits administrateurs</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2 class="presentation-title">Contact</h2>
+        <div class="divider"></div>
+        <p class="contact-text">N'hésitez pas à me contacter pour plus d'informations ou pour discuter de
+            projets, </p>
+        <p>via les réseaux sociaux ou par mail.</p>
+        <div class="contact-form">
+            <form action="#" method="post" id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" disabled>
+
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" placeholder="Votre e-mail" disabled>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" placeholder="Votre message" disabled></textarea>
+
+                <button type="submit" disabled>Envoyer</button>
+            </form>
+        </div>
+        <div class="contact-options">
+            <button onclick="window.location.href='mailto:anna.briancon33@gmail.com'">Envoyer un mail</button>
+            <div class="reseaux">
+                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img class="reseaux-image"
+                        src="assets/png/linkedin_B.png" alt="Linkedin"></a>
+                <a href="https://github.com/anna-briancon" target="_blank"><img class="reseaux-image"
+                        src="assets/png/github_B.png" alt="Github"></a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Anna Briançon - Tous droits réservés.</p>
+    </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
