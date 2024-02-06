@@ -124,3 +124,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+    var loadingOverlay = document.getElementById("loadingOverlay");
+    loadingOverlay.style.display = "none";
+    } , 1000);
+});
