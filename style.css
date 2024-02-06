@@ -311,7 +311,7 @@ strong {
 .presentation-text {
     text-align: center;
     line-height: 1.6;
-    font-size: 2vh;
+    /* font-size: 2vh; */
 }
 
 /* Compétences */
@@ -326,7 +326,7 @@ strong {
 
 .competences-title {
     color: #333333;
-    font-size: 3vh;
+    font-size: 3.5vh;
     margin-bottom: 1.5vh;
 }
 
@@ -343,7 +343,7 @@ strong {
     margin: 0 0.2vw;
     border-radius: 5px;
     text-align: center;
-    font-size: 1.8vh;
+    /* font-size: 1.8vh; */
     color: #333333;
 }
 
@@ -365,7 +365,7 @@ strong {
     padding: 1.5vh 3vw;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 2vh;
+    /* font-size: 2vh; */
     transition: background-color 0.3s ease;
 }
 
@@ -416,7 +416,9 @@ strong {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 2vh;
+    /* font-size: 2vh; */
+    font-family: 'Montserrat', sans-serif;
+
     transition: background-color 0.3s ease;
     margin: 0.2vh;
 }
