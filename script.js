@@ -73,6 +73,7 @@ function showText(textId) {
     projects.forEach(project => {
         if (project.id === textId) {
             project.style.display = 'block';
+            project.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
         } else {
             project.style.display = 'none';
         }

@@ -16,12 +16,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Russo+One&display=swap" rel="stylesheet">
 </head>
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="custom-loader"></div>
+</div>
 
 <body>
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-    <header>
+    <header class="animation">
         <div>
             <img src="assets/png/logo.png" alt="Logo" class="logo">
             <!-- <span>ABriançon</span> -->
@@ -36,7 +36,7 @@
 
     </header>
 
-    <div class="intro-container intro-animation">
+    <div class="intro-container animation">
         <video autoplay loop muted playsinline class="intro-video">
             <source src="assets/video6.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la balise vidéo.
@@ -60,20 +60,24 @@
         <div class="image-container">
             <img class="intro-image" src="assets/png/profil2.png" alt="Photo de profil">
         </div>
+
+        <div class="intro-mouse">
+            <div class="mouse"></div>
+          </div>
     </div>
 
     <section id="presentation" class="presentation-section">
-        <h2 class="presentation-title">Présentation</h2>
-        <div class="divider"></div>
+        <h2 class="presentation-title hidden">Présentation</h2>
+        <div class="divider hidden"></div>
 
-        <div class="presentation-text">
+        <div class="presentation-text hidden">
             <p>Enthousiaste, passionnée, et déterminée à repousser les limites de la créativité, je suis une
                 développeuse Fullstack avec une passion pour l'informatique, le design, et la
                 photographie.</p>
             <p>J'ai travaillé sur plusieurs projets intéressants que vous pouvez découvrir ci-dessous. </p>
         </div>
 
-        <div class="competences-outils-section">
+        <div class="competences-outils-section hidden">
             <div class="presentation-grid">
                 <div class="competences-section">
                     <h3 class="competences-title">Compétences</h3>
@@ -92,7 +96,7 @@
                         <div class="competence-box">C</div>
                     </div>
                 </div>
-                <div class="competences-section">
+                <div class="competences-section hidden">
                     <h3 class="competences-title">Outils</h3>
                     <div class="competences-grid">
                         <div class="competence-box">GIT</div>
@@ -114,10 +118,10 @@
     <div id="tooltip" style="z-index: 100000000000000000000000000;"></div>
 
     <section id="projets" class="projets-section">
-        <h2 class="presentation-title">Projets</h2>
-        <div class="divider"></div>
+        <h2 class="presentation-title hidden">Projets</h2>
+        <div class="divider hidden"></div>
 
-        <div class="projets-filter">
+        <div class="projets-filter hidden">
             <button onclick="filterProjects('all')">Tous</button>
             <button onclick="filterProjects('web')">Web</button>
             <button onclick="filterProjects('algorithmique')">Algorithmique</button>
@@ -129,7 +133,7 @@
             </button>
         </div>
 
-        <div class="projets-grid">
+        <div class="projets-grid hidden">
 
             <div class="projet" data-category="web" onclick="showText('netflop-text')">
                 <img src="assets/projet/accueil_netflop.png" alt="Netflop">
@@ -517,8 +521,9 @@
                 </p>
             </div>
 
-            <div class="projet" data-category="autres" onclick="showText('numerique-environnement-text')">
-                <img src="assets/projet/Affiche_Comment le numérique impacte-t-il l’environnement  - Copie.png" alt="Numerique">
+            <div class="projet" data-category="autre" onclick="showText('numerique-environnement-text')">
+                <img src="assets/projet/Affiche_Comment le numérique impacte-t-il l’environnement  - Copie.png"
+                    alt="Numerique">
                 <h3>Effet du numérique sur l'environnement</h3>
             </div>
             <div id="numerique-environnement-text" class="projet-text">
@@ -547,16 +552,46 @@
                 <div class="divider"></div>
 
                 <img src="assets/projet/Comment le numérique impacte-t-il l’environnement .png" style="width: 70vw;"
-                alt="Resultat d'une recherche dans la Bibliotheque">
-        </div>
+                    alt="Resultat d'une recherche dans la Bibliotheque">
+            </div>
+            <div class="projet" data-category="autre" onclick="showText('infographie-maincare')">
+                <img src="assets/projet/Affiche_Maincare - Copie.png" alt="Infographie Maincare">
+                <h3>Infographie Maincare</h3>
+            </div>
+            <div id="infographie-maincare" class="projet-text">
+                <span class="close-btn" onclick="closeText('infographie-maincare')">&times;</span>
+
+                <h2>Infographie Maincare</h2>
+                <p>
+                    Réalisation d'une infographie sur une entreprise de notre choix.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Une infographie sur l'entreprise Maincare.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Canva</li>
+                    <li>Internet</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Synthèse d'informations</li>
+                    <li>Design</li>
+                    <li>Création d'une infographie</li>
+                </ul>
+                <div class="divider"></div>
+
+                <img src="assets/projet/Maincare.png" style="width: 70vw;" alt="Resultat d'une recherche dans la Bibliotheque">
+
     </section>
     <section id="contact" class="contact-section">
-        <h2 class="presentation-title">Contact</h2>
-        <div class="divider"></div>
-        <p class="contact-text">N'hésitez pas à me contacter pour plus d'informations ou pour discuter de
+        <h2 class="presentation-title hidden">Contact</h2>
+        <div class="divider hidden"></div>
+        <p class="contact-text hidden">N'hésitez pas à me contacter pour plus d'informations ou pour discuter de
             projets, </p>
-        <p>via les réseaux sociaux ou par mail.</p>
-        <div class="contact-form">
+        <p class="contact-text hidden">via les réseaux sociaux ou par mail.</p>
+        <div class="contact-form hidden">
             <form action="https://formspree.io/f/mwkglaea" method="post" id="contactForm">
                 <label for="name">Nom :</label>
                 <input type="text" id="name" name="name" placeholder="Votre nom" required>
@@ -589,7 +624,10 @@
     </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script src="script.js"></script>
+<script src="jquery.inview.js"></script>
+
 <script>
     $(document).ready(function () {
         $('#contactForm').submit(function (e) {
@@ -620,6 +658,19 @@
             });
         });
     });
+
+    $(document).ready(function () {
+    $('.hidden').on('inview', function (event, isInView) {
+        if (isInView) {
+            $(this).addClass('visible');
+        } else {
+            $(this).removeClass('visible');
+        }
+    });
+});
+
+
+
 </script>
 
 
