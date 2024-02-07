@@ -9,18 +9,19 @@ body {
 * {
     font-family: 'Montserrat', sans-serif;
 }
-/* Styles pour la superposition de chargement */
+
+/* Styles pour le  chargement*/
 .loading-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255); 
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000000000000; 
+    z-index: 1000000000000;
 }
 
 .loader {
@@ -29,12 +30,17 @@ body {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 1s linear infinite; 
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 header {
@@ -48,16 +54,19 @@ header {
     z-index: 1000000;
 
 }
+
 span {
     font-size: 1.1em;
     font-weight: 700;
     color: #333333;
-    
+
 }
+
 .logo {
-    width: 6vh; 
-    margin-right: 3vw; 
+    width: 6vh;
+    margin-right: 3vw;
 }
+
 @media only screen and (max-width: 600px) {
     .logo {
         width: 8vh;
@@ -85,6 +94,7 @@ nav a {
     text-decoration: none;
     padding: 2vh 2vw;
 }
+
 .nav-link:hover {
     display: inline-block;
     background-color: #aa774e;
@@ -177,6 +187,7 @@ nav a {
     background-color: #e2e2e2d2;
     padding: 0 20px;
 }
+
 .intro-animation {
     opacity: 0;
     transform: translateY(50px);
@@ -189,6 +200,7 @@ nav a {
         transform: translateY(0);
     }
 }
+
 .intro-content {
     display: flex;
     align-items: center;
@@ -321,7 +333,6 @@ strong {
 .presentation-text {
     text-align: center;
     line-height: 1.6;
-    /* font-size: 2vh; */
 }
 
 /* Compétences */
@@ -353,7 +364,6 @@ strong {
     margin: 0 0.2vw;
     border-radius: 5px;
     text-align: center;
-    /* font-size: 1.8vh; */
     color: #333333;
 }
 
@@ -362,6 +372,7 @@ strong {
     flex-wrap: wrap;
     gap: 1.5vw;
 }
+
 @media only screen and (max-width: 600px) {
     .competences-section {
         padding: 2vh 5vw;
@@ -385,7 +396,6 @@ strong {
     padding: 1.5vh 3vw;
     text-decoration: none;
     border-radius: 5px;
-    /* font-size: 2vh; */
     transition: background-color 0.3s ease;
 }
 
@@ -420,6 +430,30 @@ strong {
     background-color: #f9f9f9;
 }
 
+/* survol projets */
+#tooltip {
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    position: fixed;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.2em;
+    background-color: #333333;
+    border: 2px solid #aa774e;
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: 1000000;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+.projet.hovered {
+    filter: grayscale(100%);
+}
+
+
 .projets-filter {
     display: flex;
     flex-wrap: wrap;
@@ -435,9 +469,7 @@ strong {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* font-size: 2vh; */
     font-family: 'Montserrat', sans-serif;
-
     transition: background-color 0.3s ease;
     margin: 0.2vh;
 }
@@ -448,13 +480,15 @@ strong {
 
 .projets-filter button.active {
     background-color: #5c3b22;
-    color: #ffffff; 
+    color: #ffffff;
 }
+
 .icon-camera {
     width: 2vh;
     height: auto;
     margin-right: 5px;
 }
+
 .projets-grid {
     display: flex;
     flex-wrap: wrap;
@@ -468,16 +502,25 @@ strong {
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 .projet:hover {
     cursor: pointer;
-    border: 1px solid #aa774e;
+    transform: scale(1.03);
+
 }
 
 @media only screen and (max-width: 1024px) {
     .projet {
         width: 45%;
+        transition: none;
+    }
+
+    .projet:hover {
+        cursor: pointer;
+        transform: none;
     }
 }
 
@@ -496,9 +539,11 @@ strong {
 
 .projet img {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
 }
+
 
 .projet h3 {
     margin-top: 1vh;
@@ -538,22 +583,21 @@ strong {
     text-align: left;
     z-index: 1000000;
     width: 70vw;
+    overflow-y: auto;
+    max-height: 80vh;
 }
 
 .projet-text h2 {
     color: #333333;
-    /* font-size: 2.2vh; */
     margin-bottom: 1vw;
 }
 
 .projet-text h3 {
     color: #aa774e;
-    /* font-size: 2vh; */
     margin-top: 1vw;
 }
 
 .projet-text p {
-    /* font-size: 1.8vh; */
     margin-bottom: 1vw;
 }
 

@@ -50,8 +50,8 @@
             </div>
 
             <div class="intro-reseaux">
-                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img class="intro-reseaux-image"
-                        src="assets/png/linkedin_B.png" alt="Linkedin"></a>
+                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img
+                        class="intro-reseaux-image" src="assets/png/linkedin_B.png" alt="Linkedin"></a>
                 <a href="https://github.com/anna-briancon" target="_blank"><img class="intro-reseaux-image"
                         src="assets/png/github_B.png" alt="Github"></a>
             </div>
@@ -111,6 +111,7 @@
 
             </div>
     </section>
+    <div id="tooltip" style="z-index: 100000000000000000000000000;"></div>
 
     <section id="projets" class="projets-section">
         <h2 class="presentation-title">Projets</h2>
@@ -120,14 +121,16 @@
             <button onclick="filterProjects('all')">Tous</button>
             <button onclick="filterProjects('web')">Web</button>
             <button onclick="filterProjects('algorithmique')">Algorithmique</button>
-            <button onclick="filterProjects('database')">Base de données</button>
+            <button onclick="filterProjects('base de donnée')">Base de données</button>
             <button onclick="filterProjects('reseaux')">Systèmes Réseaux</button>
+            <button onclick="filterProjects('autres')">Autres</button>
             <button onclick="filterProjects('photo')">
                 <img src="assets/png/appareil-photo.png" alt="Appareil photo" class="icon-camera"> Photos
             </button>
-                    </div>
+        </div>
 
         <div class="projets-grid">
+
             <div class="projet" data-category="web" onclick="showText('netflop-text')">
                 <img src="assets/projet/accueil_netflop.png" alt="Netflop">
                 <h3>Netflop</h3>
@@ -156,66 +159,105 @@
                 <p>
                     Organisation d'équipe selon la méthode scrum, création d'une application Symfony complète.
                 </p>
-            </div>
-            <div class="projet" data-category="web" onclick="showText('beer-bear-text')">
-                <img src="assets/projet/B&B.png" alt="Beer&Bear">
-                <h3>Beer&Bear</h3>
+                <div class="divider"></div>
+
+                <img src="assets/projet/accueil_netflop.png" style="width: 70vw;" alt="Page d'accueil Netflop">
+                <img src="assets/projet/pageNetflop.png" style="width: 70vw;" alt="Catalogue Netflop">
+                <img src="assets/projet/dashboardNetflop.png" style="width: 70vw;" alt="Dashboard Netflop">
             </div>
 
-            <div id="beer-bear-text" class="projet-text">
-                <span class="close-btn" onclick="closeText('beer-bear-text')">&times;</span>
+            <div class="projet" data-category="web" onclick="showText('bibliotheque-text')">
+                <img src="assets/projet/projet/Bibliotheque.png" alt="Bibliothèque">
+                <h3>Bibliothèque</h3>
+            </div>
+            <div id="bibliotheque-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('bibliotheque-text')">&times;</span>
 
-                <h2>Beer&Bear</h2>
+                <h2>Bibliothèque</h2>
                 <p>
-                    Réalisation d'un site pour une entreprise fictive. Un site ergonomique, au goût du jour et adapté à
-                    toutes tailles d'écran.
+                    Interrogation de l'API Google Books avec une application React permettant de rechercher des livres.
                 </p>
                 <h3>Résultat</h3>
-                <ul>
-                    <li>Un site web</li>
-                    <li>Une maquette de notre site</li>
-                </ul>
+                <p>
+                    Une application permettant de rechercher des livres sur l'API Google Books, affichage des résultats
+                    de la recherche par auteur,
+                    possibilité de voir les détails d'un livre, gestion de la pagination, possibilité de suivre des
+                    abonnés.
+                </p>
                 <h3>Outils</h3>
                 <ul>
-                    <li>Visual Studio Code</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
+                    <li>React</li>
+                    <li>Axios</li>
+                </ul>
+
+                <h3>Compétences </h3>
+                <ul>
+                    <li>Découverte du React</li>
+                    <li>Interrogation d'une API avec Axios</li>
+                </ul>
+                <div class="divider"></div>
+
+                <img src="assets/projet/projet/Bibliotheque.png" style="width: 70vw;"
+                    alt="Resultat d'une recherche dans la Bibliotheque">
+                <img src="assets/projet/projet/Bibliotheque2.png" style="width: 70vw;"
+                    alt="Page des derniers livres empruntés">
+                <img src="assets/projet/projet/Bibliotheque3.png" style="width: 70vw;" alt="Page des abonnés">
+            </div>
+
+
+            <div class="projet" data-category="algorithmique" onclick="showText('labyrinthe-text')">
+                <img src="assets/projet/projet/labyrinthe.png" alt="Labyrinthe">
+                <h3>Labyrinthe</h3>
+            </div>
+            <div id="labyrinthe-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('labyrinthe-text')">&times;</span>
+
+                <h2>Labyrinthe</h2>
+                <p>
+                    Projet de jeu de labyrinthe mettant en scène un joueur et des monstres.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Réalisation d'un jeu interactif permettant au joueur de naviguer à travers un labyrinthe, avec la
+                    présence de monstres ajoutant un élément de défi au jeu.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>Netbeans</li>
+                </ul>
+                <h3>Compétences</h3>
+                <p>
+                    Développement d'une application Java avec une interface graphique.
+                </p>
+            </div>
+
+            <div class="projet" data-category="base de donnée" onclick="showText('graveetcompagnie-text')">
+                <img src="assets/projet/projet/graveetcie.png" alt="Grave et Cie">
+                <h3>Grave et Cie</h3>
+            </div>
+            <div id="graveetcompagnie-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('graveetcompagnie-text')">&times;</span>
+
+                <h2>Grave et Cie</h2>
+                <p>
+                    Projet visant à proposer une solution d’organisation d’inventaire pour une entreprise fictive de
+                    négoce Bordelais.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Réalisation d’un Modèle Conceptuel des Données (MCD) et d’un script de création de base de données.
+                    Élaboration de requêtes SQL, conception d'une maquette d’application avec ses fonctionnalités.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>WinDesign</li>
+                    <li>SQL Server Management Studio</li>
                 </ul>
                 <h3>Compétences</h3>
                 <ul>
-                    <li>Création d'un site fixe et responsive</li>
-                    <li>Un site dans les tendances</li>
-                </ul>
-            </div>
-
-            <div class="projet" data-category="web" onclick="showText('andalima-text')">
-                <img src="assets/projet/AndaLima.png" alt="AndaLima">
-                <h3>AndaLima</h3>
-            </div>
-
-            <div id="andalima-text" class="projet-text">
-                <span class="close-btn" onclick="closeText('andalima-text')">&times;</span>
-
-                <h2>AndaLima</h2>
-                <p>
-                    Réalisation d'un site web vitrine en collaboration avec des élèves d'une école de restauration
-                    hôtellerie.
-                </p>
-                <h3>Résultat</h3>
-                <ul>
-                    <li>Un site web</li>
-                </ul>
-                <h3>Outils</h3>
-                <ul>
-                    <li>Visual Studio Code</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-                <h3>Compétences</h3>
-                <ul>
-                    <li>Création d'un site web vitrine</li>
-                    <li>Collaboration avec des élèves d'une école de restauration hôtellerie</li>
+                    <li>Création et utilisation d'une base de données</li>
+                    <li>Commandes SQL</li>
                 </ul>
             </div>
 
@@ -223,7 +265,6 @@
                 <img src="assets/projet/cafeePierre3.png" alt="CaféPierre">
                 <h3>CaféPierre</h3>
             </div>
-
             <div id="cafepierre-text" class="projet-text">
                 <span class="close-btn" onclick="closeText('cafepierre-text')">&times;</span>
 
@@ -248,7 +289,6 @@
                     <li>Organisation d'une équipe</li>
                 </ul>
             </div>
-
 
             <div class="projet" data-category="algorithmique" onclick="showText('6quiprend-text')">
                 <img src="assets/projet/projet/6quiprend.png" alt="6 qui prend">
@@ -276,41 +316,72 @@
                     <li>Intégration d'éléments graphiques interagissant avec la partie logique de l'application</li>
                 </ul>
             </div>
-            <div class="projet" data-category="database" onclick="showText('graveetcompagnie-text')">
-                <img src="assets/projet/projet/graveetcie.png" alt="Grave et Cie">
-                <h3>Grave et Cie</h3>
+
+            <div class="projet" data-category="web" onclick="showText('andalima-text')">
+                <img src="assets/projet/AndaLima.png" alt="AndaLima">
+                <h3>AndaLima</h3>
             </div>
+            <div id="andalima-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('andalima-text')">&times;</span>
 
-            <div id="graveetcompagnie-text" class="projet-text">
-                <span class="close-btn" onclick="closeText('graveetcompagnie-text')">&times;</span>
-
-                <h2>Grave et Cie</h2>
+                <h2>AndaLima</h2>
                 <p>
-                    Projet visant à proposer une solution d’organisation d’inventaire pour une entreprise fictive de
-                    négoce Bordelais.
+                    Réalisation d'un site web vitrine en collaboration avec des élèves d'une école de restauration
+                    hôtellerie.
                 </p>
                 <h3>Résultat</h3>
-                <p>
-                    Réalisation d’un Modèle Conceptuel des Données (MCD) et d’un script de création de base de données.
-                    Élaboration de requêtes SQL, conception d'une maquette d’application avec ses fonctionnalités.
-                </p>
+                <ul>
+                    <li>Un site web</li>
+                </ul>
                 <h3>Outils</h3>
                 <ul>
-                    <li>WinDesign</li>
-                    <li>SQL Server Management Studio</li>
+                    <li>Visual Studio Code</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
                 </ul>
                 <h3>Compétences</h3>
                 <ul>
-                    <li>Création et utilisation d'une base de données</li>
-                    <li>Commandes SQL</li>
+                    <li>Création d'un site web vitrine</li>
+                    <li>Collaboration avec des élèves d'une école de restauration hôtellerie</li>
                 </ul>
             </div>
-            <div class="projet" data-category="reseaux" onclick="showText('automatisationweb-text')">
-                <img src="assets/projet/projet/autopageweb.png" style="width: 60%; height: auto;"
-                    alt="Automatisation de Page Web">
-                <h3>Automatisation de Page Web</h3>
+
+
+            <div class="projet" data-category="web" onclick="showText('beer-bear-text')">
+                <img src="assets/projet/B&B.png" alt="Beer&Bear">
+                <h3>Beer&Bear</h3>
+            </div>
+            <div id="beer-bear-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('beer-bear-text')">&times;</span>
+
+                <h2>Beer&Bear</h2>
+                <p>
+                    Réalisation d'un site pour une entreprise fictive. Un site ergonomique, au goût du jour et adapté à
+                    toutes tailles d'écran.
+                </p>
+                <h3>Résultat</h3>
+                <ul>
+                    <li>Un site web</li>
+                    <li>Une maquette de notre site</li>
+                </ul>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Création d'un site fixe et responsive</li>
+                    <li>Un site dans les tendances</li>
+                </ul>
             </div>
 
+            <div class="projet" data-category="reseaux" onclick="showText('automatisationweb-text')">
+                <img src="assets/projet/projet/autopageweb.png" alt="Automatisation de Page Web">
+                <h3>Automatisation de Page Web</h3>
+            </div>
             <div id="automatisationweb-text" class="projet-text">
                 <span class="close-btn" onclick="closeText('automatisationweb-text')">&times;</span>
 
@@ -336,11 +407,11 @@
                     <li>Utilisation de fonctions Bash pour intégrer des PDF et des bandes sonores</li>
                 </ul>
             </div>
+
             <div class="projet" data-category="reseaux" onclick="showText('installationposte-text')">
                 <img src="assets/projet/projet/installationposte.png" alt="Installation de Poste">
                 <h3>Installation de Poste</h3>
             </div>
-
             <div id="installationposte-text" class="projet-text">
                 <span class="close-btn" onclick="closeText('installationposte-text')">&times;</span>
 
@@ -374,6 +445,109 @@
                 </ul>
             </div>
 
+            <div class="projet" data-category="algorithmique" onclick="showText('pong-text')">
+                <img src="assets/projet/projet/pong.png" alt="Pong">
+                <h3>Pong</h3>
+            </div>
+            <div id="pong-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('pong-text')">&times;</span>
+
+                <h2>Pong</h2>
+                <p>
+                    Projet consistant en la réalisation d'un jeu Pong et la création d'un document de conception
+                    à partir
+                    d'un code existant.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Développement d'un jeu Pong fonctionnel avec des fonctionnalités avancées telles qu'un mode 4
+                    joueurs, un mode
+                    4 balles, un mode pause, l'ajout d'obstacles et de vortex permettant aux balles de se téléporter. Et
+                    la
+                    création d'un menu.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>Processing</li>
+                    <li>Mathématiques et Logique</li>
+                </ul>
+                <h3>Compétences</h3>
+                <p>
+                    Création et modification d'éléments interactifs avec leur environnement et entre eux dans le cadre
+                    du jeu Pong.
+                    Utilisation de Java, Processing, ainsi que des compétences en mathématiques et en logique pour
+                    mettre en place
+                    un jeu avec des fonctionnalités avancées. En outre, création d'une interface graphique pour
+                    améliorer
+                    l'expérience utilisateur.
+                </p>
+            </div>
+
+            <div class="projet" data-category="algorithmique" onclick="showText('lowatem-text')">
+                <img src="assets/projet/projet/lowatem.png" alt="Lowatem">
+                <h3>Lowatem</h3>
+            </div>
+            <div id="lowatem-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('lowatem-text')">&times;</span>
+
+                <h2>Lowatem</h2>
+                <p>
+                    Projet consistant à créer des niveaux pour un jeu existant, suivi de la conception d'une
+                    intelligence artificielle
+                    (IA) capable de rivaliser avec les autres IA développées par des étudiants dans ce jeu de stratégie.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Réalisation de 10 niveaux pour le jeu et mise en place d'une IA compétente capable de sélectionner
+                    des coups
+                    maximisant les dégâts infligés à l'adversaire.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Logique</li>
+                    <li>Java</li>
+                    <li>Netbeans</li>
+                </ul>
+                <h3>Compétences Mises en Place</h3>
+                <p>
+                    Développement de patience et persévérance dans la création d'une IA performante. Utilisation de la
+                    logique et de
+                    Java via l'environnement Netbeans pour aboutir à un projet réussi.
+                </p>
+            </div>
+
+            <div class="projet" data-category="autres" onclick="showText('numerique-environnement-text')">
+                <img src="assets/projet/Affiche_Comment le numérique impacte-t-il l’environnement  - Copie.png" alt="Numerique">
+                <h3>Effet du numérique sur l'environnement</h3>
+            </div>
+            <div id="numerique-environnement-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('numerique-environnement-text')">&times;</span>
+
+                <h2>Effet du numérique sur l'environnement</h2>
+                <p>
+                    Recherche sur l'impact du numérique sur l'environnement et réalisation d'un poster.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Un poster mettant en avant l'impact du numérique sur l'environnement.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>Canva</li>
+                    <li>Internet</li>
+                </ul>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Recherche sur un sujet</li>
+                    <li>Synthèse d'informations</li>
+                    <li>Création d'un poster</li>
+                    <li>Design</li>
+                </ul>
+                <div class="divider"></div>
+
+                <img src="assets/projet/Comment le numérique impacte-t-il l’environnement .png" style="width: 70vw;"
+                alt="Resultat d'une recherche dans la Bibliotheque">
         </div>
     </section>
     <section id="contact" class="contact-section">
@@ -383,24 +557,26 @@
             projets, </p>
         <p>via les réseaux sociaux ou par mail.</p>
         <div class="contact-form">
-            <form action="#" method="post" id="contactForm">
+            <form action="https://formspree.io/f/mwkglaea" method="post" id="contactForm">
                 <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" disabled>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
 
                 <label for="email">E-mail :</label>
-                <input type="email" id="email" name="email" placeholder="Votre e-mail" disabled>
+                <input type="email" id="email" name="email" placeholder="Votre e-mail" required>
 
                 <label for="message">Message :</label>
-                <textarea id="message" name="message" placeholder="Votre message" disabled></textarea>
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
 
-                <button type="submit" disabled>Envoyer</button>
-            </form>
+                <button type="submit">Envoyer</button>
+                <div id="success-message" style="display: none; color: green;"></div>
+
         </div>
+
         <div class="contact-options">
             <button onclick="window.location.href='mailto:anna.briancon33@gmail.com'">Envoyer un mail</button>
             <div class="reseaux">
-                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img class="reseaux-image"
-                        src="assets/png/linkedin_B.png" alt="Linkedin"></a>
+                <a href="https://www.linkedin.com/in/anna-brian%C3%A7on-68b72124b/" target="_blank"><img
+                        class="reseaux-image" src="assets/png/linkedin_B.png" alt="Linkedin"></a>
                 <a href="https://github.com/anna-briancon" target="_blank"><img class="reseaux-image"
                         src="assets/png/github_B.png" alt="Github"></a>
             </div>
@@ -412,6 +588,39 @@
         <p>&copy; 2024 Anna Briançon - Tous droits réservés.</p>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="script.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#contactForm').submit(function (e) {
+            e.preventDefault();
+
+            var formData = {
+                name: $('#name').val(),
+                email: $('#email').val(),
+                message: $('#message').val()
+            };
+
+            $.ajax({
+                url: 'https://formspree.io/f/mwkglaea',
+                method: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function (data) {
+                    console.log('Message envoyé avec succès');
+                    $('#success-message').text('Le message a été envoyé avec succès.');
+                    $('#success-message').show();
+                },
+                error: function (error) {
+                    console.error('Erreur lors de l\'envoi du message');
+                    $('#success-message').text('Erreur lors de l\'envoi du message, veuillez cliquer sur "Envoyer un mail');
+                    $('#success-message').show();
+
+                }
+            });
+        });
+    });
+</script>
+
 
 </html>

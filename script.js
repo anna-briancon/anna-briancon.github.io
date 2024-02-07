@@ -1,3 +1,5 @@
+
+// Filtre les projets en fonction de la catégorie spécifiée
 document.addEventListener('DOMContentLoaded', function () {
     filterProjects('all');
 
@@ -23,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
             navLinks.forEach(navLink => navLink.classList.remove('active'));
         }
     }
-
     window.addEventListener('scroll', highlightNavLink);
 });
 
+// Filtre les projets en fonction de la catégorie spécifiée et mettre à jour l'affichage des boutons
 function filterProjects(category) {
     const projects = document.querySelectorAll('.projet');
     const buttons = document.querySelectorAll('.projets-filter button');
@@ -64,7 +66,7 @@ function filterProjects(category) {
     });
 }
 
-
+// Affiche le texte du projet spécifié comme une popup
 function showText(textId) {
     const projects = document.querySelectorAll('.projet-text');
 
@@ -76,39 +78,14 @@ function showText(textId) {
         }
     });
 }
+
+// Ferme le texte du projet spécifié
 function closeText(textId) {
     const projectText = document.getElementById(textId);
     projectText.style.display = 'none';
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section');
-
-    function highlightNavLink() {
-        const scrollPosition = window.scrollY;
-        let sectionIsVisible = false;
-
-        sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop - 50;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                navLinks.forEach(navLink => navLink.classList.remove('active'));
-                navLinks[index].classList.add('active');
-                sectionIsVisible = true;
-            }
-        });
-
-        if (!sectionIsVisible) {
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-        }
-    }
-
-    window.addEventListener('scroll', highlightNavLink);
-});
-
-
+// Affiche le menu lors du clique sur le bouton burger
 document.addEventListener('DOMContentLoaded', function () {
     const burgerBtn = document.getElementById('burger-btn');
     const nav = document.querySelector('nav');
@@ -125,9 +102,44 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Affiche le chargement de la page
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
     var loadingOverlay = document.getElementById("loadingOverlay");
     loadingOverlay.style.display = "none";
     } , 1000);
+});
+
+// Affiche le tooltip lors du survol d'un projet
+document.addEventListener('DOMContentLoaded', function () {
+    const tooltip = document.getElementById('tooltip');
+    const projets = document.querySelectorAll('.projet');
+    let mouseX, mouseY;
+
+    document.addEventListener('mousemove', function (event) {
+        mouseX = event.clientX + window.scrollX;
+        mouseY = event.clientY + window.scrollY;
+    });
+
+    function updateTooltipPosition() {
+        tooltip.style.position = 'absolute';
+        tooltip.style.left = `${mouseX + 10}px`;
+        tooltip.style.top = `${mouseY + 10}px`;
+        requestAnimationFrame(updateTooltipPosition);
+    }
+
+    projets.forEach(projet => {
+        projet.addEventListener('mouseover', function () {
+            const category = projet.getAttribute('data-category');
+            tooltip.style.display = 'block';
+            tooltip.innerHTML = category;
+            updateTooltipPosition();
+            projet.classList.add('hovered'); 
+        });
+
+        projet.addEventListener('mouseout', function () {
+            tooltip.style.display = 'none';
+            projet.classList.remove('hovered');
+        });
+    });
 });
