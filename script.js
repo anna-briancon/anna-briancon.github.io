@@ -131,16 +131,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     projets.forEach(projet => {
         projet.addEventListener('mouseover', function () {
-            const category = projet.getAttribute('data-category');
-            tooltip.style.display = 'block';
-            tooltip.innerHTML = category;
-            updateTooltipPosition();
-            projet.classList.add('hovered'); 
+            if (window.innerWidth > 1000) {
+                const category = projet.getAttribute('data-category');
+                tooltip.style.display = 'block';
+                tooltip.innerHTML = category;
+                updateTooltipPosition();
+                projet.classList.add('hovered');
+            }
         });
 
         projet.addEventListener('mouseout', function () {
-            tooltip.style.display = 'none';
-            projet.classList.remove('hovered');
+            if (window.innerWidth > 1000) {
+                tooltip.style.display = 'none';
+                projet.classList.remove('hovered');
+            }
         });
     });
 });
