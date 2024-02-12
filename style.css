@@ -520,11 +520,10 @@ strong {
     font-family: 'Montserrat', sans-serif;
     display: none;
     position: fixed;
-    padding: 10px;
+    padding: 8px;
     color: #ffffff;
-    font-size: 1.2em;
+    font-size: 1em;
     background-color: #333333;
-    border: 2px solid #aa774e;
     border-radius: 8px;
     pointer-events: none;
     z-index: 1000000;
