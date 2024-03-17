@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -86,7 +88,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000000;
-
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.038);
 }
 
 span {
@@ -120,7 +122,6 @@ span {
 
 nav {
     display: flex;
-
 }
 
 nav a {
@@ -307,8 +308,10 @@ strong {
 }
 
 .intro-text-3 {
-    font-family: 'Russo One', sans-serif;
+    font-family: "Livvic", sans-serif;
     font-size: 0.6em;
+    font-weight: 700;
+    font-style: normal;
     text-transform: uppercase;
 }
 
