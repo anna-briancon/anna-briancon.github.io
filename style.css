@@ -101,6 +101,7 @@ span {
 .logo {
     width: 6vh;
     margin-right: 3vw;
+    margin-top: 6px;
 }
 
 @media only screen and (max-width: 600px) {
