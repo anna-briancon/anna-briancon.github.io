@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     margin: 0;
@@ -207,7 +208,18 @@ nav a {
     max-height: 100%;
     z-index: -1;
 }
-
+.intro-divider {
+    width: 5%;
+    height: 2px;
+    background-color: #333333;
+    margin: 5vh auto;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom: 32%;
+    left: 32%;
+}
 @media only screen and (max-width: 1024px) {
     .intro-video {
         display: none;
@@ -218,7 +230,7 @@ nav a {
 .intro-container {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
     background-color: #ffffffd2;
     padding: 0 20px;
@@ -290,9 +302,11 @@ nav a {
 
 .intro-content {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
-
+.intro-content,.image-container {
+    margin-top: 30vh;
+}
 .intro-text {
     text-align: left;
     font-size: 2.3em;
