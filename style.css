@@ -221,6 +221,12 @@ nav a {
     left: 32%;
 }
 @media only screen and (max-width: 1024px) {
+    .intro-divider {
+        display: none;
+
+    }
+}
+@media only screen and (max-width: 1024px) {
     .intro-video {
         display: none;
 
