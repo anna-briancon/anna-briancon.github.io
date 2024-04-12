@@ -59,7 +59,7 @@
 
         <div class="intro-mouse">
             <div class="mouse"></div>
-          </div>
+        </div>
     </div>
     <div class="intro-background"></div>
 
@@ -113,7 +113,7 @@
             </div>
     </section>
     <div id="tooltip" style="z-index: 100000000000000000000000;"></div>
-    
+
     <section id="projets" class="projets-section">
         <h2 class="presentation-title hidden">Projets</h2>
         <div class="divider hidden"></div>
@@ -579,7 +579,8 @@
                 </ul>
                 <div class="divider"></div>
 
-                <img src="assets/projet/Maincare.png" style="width: 70vw;" alt="Resultat d'une recherche dans la Bibliotheque">
+                <img src="assets/projet/Maincare.png" style="width: 70vw;"
+                    alt="Resultat d'une recherche dans la Bibliotheque">
 
     </section>
     <section id="contact" class="contact-section">
@@ -657,17 +658,14 @@
     });
 
     $(document).ready(function () {
-    $('.hidden').on('inview', function (event, isInView) {
-        if (isInView) {
-            $(this).addClass('visible');
-        } else {
-            $(this).removeClass('visible');
-        }
+        $('.hidden').on('inview', function (event, isInView) {
+            if (isInView) {
+                $(this).addClass('visible');
+            } else {
+                $(this).removeClass('visible');
+            }
+        });
     });
-});
-
-
-
 </script>
 
 

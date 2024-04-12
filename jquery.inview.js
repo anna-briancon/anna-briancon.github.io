@@ -1,17 +1,9 @@
-/**
- * author Christopher Blum
- *    - based on the idea of Remy Sharp, http://remysharp.com/2009/01/26/element-in-view-event-plugin/
- *    - forked from http://github.com/zuk/jquery.inview/
- */
 (function (factory) {
   if (typeof define == 'function' && define.amd) {
-    // AMD
     define(['jquery'], factory);
   } else if (typeof exports === 'object') {
-    // Node, CommonJS
     module.exports = factory(require('jquery'));
   } else {
-      // Browser globals
     factory(jQuery);
   }
 }(function ($) {
@@ -22,16 +14,6 @@
   $.event.special.inview = {
     add: function(data) {
       inviewObjects.push({ data: data, $element: $(this), element: this });
-      // Use setInterval in order to also make sure this captures elements within
-      // "overflow:scroll" elements or elements that appeared in the dom tree due to
-      // dom manipulation and reflow
-      // old: $(window).scroll(checkInView);
-      //
-      // By the way, iOS (iPad, iPhone, ...) seems to not execute, or at least delays
-      // intervals while the user scrolls. Therefore the inview event might fire a bit late there
-      //
-      // Don't waste cycles with an interval until we get at least one element that
-      // has bound to the inview event.
       if (!timer && inviewObjects.length) {
          timer = setInterval(checkInView, 250);
       }
@@ -46,7 +28,6 @@
         }
       }
 
-      // Clear interval when we no longer have any elements listening
       if (!inviewObjects.length) {
          clearInterval(timer);
          timer = null;
@@ -57,14 +38,12 @@
   function getViewportSize() {
     var mode, domObject, size = { height: w.innerHeight, width: w.innerWidth };
 
-    // if this is correct then return it. iPad has compat Mode, so will
-    // go into check clientHeight/clientWidth (which has the wrong value).
     if (!size.height) {
       mode = d.compatMode;
-      if (mode || !$.support.boxModel) { // IE, Gecko
+      if (mode || !$.support.boxModel) {
         domObject = mode === 'CSS1Compat' ?
-          documentElement : // Standards
-          d.body; // Quirks
+          documentElement : 
+          d.body;
         size = {
           height: domObject.clientHeight,
           width:  domObject.clientWidth
@@ -97,7 +76,6 @@
     viewportOffset = viewportOffset || getViewportOffset();
 
     for (; i<inviewObjects.length; i++) {
-      // Ignore elements that are not in the DOM tree
       if (!$.contains(documentElement, $elements[i][0])) {
         continue;
       }
@@ -107,11 +85,6 @@
           elementOffset = $element.offset(),
           inView        = $element.data('inview');
 
-      // Don't ask me why because I haven't figured out yet:
-      // viewportOffset and viewportSize are sometimes suddenly null in Firefox 5.
-      // Even though it sounds weird:
-      // It seems that the execution of this function is interferred by the onresize/onscroll event
-      // where viewportOffset and viewportSize are unset
       if (!viewportOffset || !viewportSize) {
         return;
       }
@@ -133,7 +106,6 @@
     viewportSize = viewportOffset = null;
   });
 
-  // IE < 9 scrolls to focused elements without firing the "scroll" event
   if (!documentElement.addEventListener && documentElement.attachEvent) {
     documentElement.attachEvent("onfocusin", function() {
       viewportOffset = null;
