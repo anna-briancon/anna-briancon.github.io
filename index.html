@@ -46,8 +46,8 @@
             <div class="intro-divider"></div>
 
             <div class="intro-reseaux">
-                <a href="https://www.linkedin.com/in/anna-briancon/" target="_blank"><img
-                        class="intro-reseaux-image" src="assets/png/linkedin_B.png" alt="Linkedin"></a>
+                <a href="https://www.linkedin.com/in/anna-briancon/" target="_blank"><img class="intro-reseaux-image"
+                        src="assets/png/linkedin_B.png" alt="Linkedin"></a>
                 <a href="https://github.com/anna-briancon" target="_blank"><img class="intro-reseaux-image"
                         src="assets/png/github_B.png" alt="Github"></a>
             </div>
@@ -125,12 +125,41 @@
             <button onclick="filterProjects('base de donnée')">Base de données</button>
             <button onclick="filterProjects('reseaux')">Systèmes Réseaux</button>
             <button onclick="filterProjects('autre')">Autres</button>
-            <button onclick="filterProjects('photo')">
-                <img src="assets/png/appareil-photo.png" alt="Appareil photo" class="icon-camera"> Photos
-            </button>
         </div>
 
         <div class="projets-grid hidden">
+
+            <div class="projet" data-category="web" onclick="showText('photo-text')">
+                <img src="assets/projet/photo.png" alt="Photos">
+                <h3>Photos</h3>
+            </div>
+            <div id="photo-text" class="projet-text">
+                <span class="close-btn" onclick="closeText('photo-text')">&times;</span>
+
+                <h2>Photos</h2>
+                <p>
+                    Site web permettant à chaque utilisateur de découvrir mes photos et de me contacter.
+                </p>
+                <h3>Résultat</h3>
+                <p>
+                    Site web fonctionnel permettant de parcourir une galerie de photos, de rentrer en contact avec moi
+                    et d'afficher les photos sur une carte.
+                </p>
+                <h3>Outils</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <h3>Compétences</h3>
+                <p>
+                    Création d'un site web complet pour exposer mes photos, incluant une galerie, un formulaire de contact et une carte interactive.
+                </p>
+                <div class="divider"></div>
+                <img src="assets/projet/photo.png" style="width: 70vw; margin-bottom: 5%;" alt="Page d'accueil du site">
+                <img src="assets/projet/photo2.png" style="width: 70vw; margin-bottom: 5%;" alt="Page d'une catégorie">
+                <img src="assets/projet/photo3.png" style="width: 70vw; margin-bottom: 5%;" alt="Carte intéractive">
+            </div>
 
             <div class="projet" data-category="web" onclick="showText('netflop-text')">
                 <img src="assets/projet/accueil_netflop.png" alt="Netflop">
@@ -608,8 +637,8 @@
         <div class="contact-options">
             <button onclick="window.location.href='mailto:anna.briancon33@gmail.com'">Envoyer un mail</button>
             <div class="reseaux">
-                <a href="https://www.linkedin.com/in/anna-briancon/" target="_blank"><img
-                        class="reseaux-image" src="assets/png/linkedin_B.png" alt="Linkedin"></a>
+                <a href="https://www.linkedin.com/in/anna-briancon/" target="_blank"><img class="reseaux-image"
+                        src="assets/png/linkedin_B.png" alt="Linkedin"></a>
                 <a href="https://github.com/anna-briancon" target="_blank"><img class="reseaux-image"
                         src="assets/png/github_B.png" alt="Github"></a>
             </div>
